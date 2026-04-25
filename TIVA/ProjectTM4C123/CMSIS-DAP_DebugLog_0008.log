@@ -1,0 +1,134 @@
+CMSIS_AGDI.DLL - CMSIS-DAP Driver Log
+
+20:10:45:170 (18/03/2026) - WRITE DP  Access, Addr 0x00000008, Val 0x00000000, "DAP Write DP - Success" - ID 0
+20:10:45:172 (18/03/2026) - WRITE DP  Access, Addr 0x00000004, Val 0x50000000, "DAP Write DP - Success" - ID 1
+20:10:45:177 (18/03/2026) - READ  DP  Access, Addr 0x00000004, Val 0xF0000000, "DAP Read DP - Success" - ID 2
+20:10:45:180 (18/03/2026) - WRITE DP  Access, Addr 0x00000004, Val 0x50000F32, "DAP Write DP - Success" - ID 3
+20:10:45:185 (18/03/2026) - READ  AP  Access, AP 0x00000000, Addr 0x000000FC, Val 0x24770011, "DAP Read AP - Success" - ID 4
+20:10:45:187 (18/03/2026) - READ  AP  Access, AP 0x00000000, Addr 0x000000FC, Val 0x24770011, "JTAG Read AP - Success" - ID 5
+20:10:45:202 (18/03/2026) - WRITE AP  Access, AP 0x00000000, Addr 0x00000000, Val 0x23000052, "DAP Write AP - Success" - ID 6
+20:10:45:208 (18/03/2026) - READ  AP  Access, AP 0x00000000, Addr 0x000000F8, Val 0xE00FF003, "DAP Read AP - Success" - ID 7
+20:10:45:220 (18/03/2026) - READ  MEM BLOCK Access, AP 0x00000000, Start Addr 0xE00FFFF0, End Addr 0xE00FFFFF, "DAP Read Memory Block - Success" - ID 8
+  Item #0, AP 0, Addr 0xE00FFFF0, Value 0x0000000D
+  Item #1, AP 0, Addr 0xE00FFFF4, Value 0x00000010
+  Item #2, AP 0, Addr 0xE00FFFF8, Value 0x00000005
+  Item #3, AP 0, Addr 0xE00FFFFC, Value 0x000000B1
+20:10:45:226 (18/03/2026) - READ  MEM BLOCK Access, AP 0x00000000, Start Addr 0xE00FFFD0, End Addr 0xE00FFFEF, "DAP Read Memory Block - Success" - ID 9
+  Item #0, AP 0, Addr 0xE00FFFD0, Value 0x00000004
+  Item #1, AP 0, Addr 0xE00FFFD4, Value 0x00000000
+  Item #2, AP 0, Addr 0xE00FFFD8, Value 0x00000000
+  Item #3, AP 0, Addr 0xE00FFFDC, Value 0x00000000
+  Item #4, AP 0, Addr 0xE00FFFE0, Value 0x000000C4
+  Item #5, AP 0, Addr 0xE00FFFE4, Value 0x000000B4
+  Item #6, AP 0, Addr 0xE00FFFE8, Value 0x0000000B
+  Item #7, AP 0, Addr 0xE00FFFEC, Value 0x00000000
+20:10:45:226 (18/03/2026) - ROM TABLE: Detected ROM Table (Cortex-M4) at address 0xE00FF000 (PID 0x00000004000BB4C4, CID 0xB105100D)
+20:10:45:230 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE00FF000, Val 0xFFF0F003, "DAP Read Memory (32 bit) - Success" - ID 10
+20:10:45:236 (18/03/2026) - READ  MEM BLOCK Access, AP 0x00000000, Start Addr 0xE000EFF0, End Addr 0xE000EFFF, "DAP Read Memory Block - Success" - ID 11
+  Item #0, AP 0, Addr 0xE000EFF0, Value 0x0000000D
+  Item #1, AP 0, Addr 0xE000EFF4, Value 0x000000E0
+  Item #2, AP 0, Addr 0xE000EFF8, Value 0x00000005
+  Item #3, AP 0, Addr 0xE000EFFC, Value 0x000000B1
+20:10:45:247 (18/03/2026) - READ  MEM BLOCK Access, AP 0x00000000, Start Addr 0xE000EFD0, End Addr 0xE000EFEF, "DAP Read Memory Block - Success" - ID 12
+  Item #0, AP 0, Addr 0xE000EFD0, Value 0x00000004
+  Item #1, AP 0, Addr 0xE000EFD4, Value 0x00000000
+  Item #2, AP 0, Addr 0xE000EFD8, Value 0x00000000
+  Item #3, AP 0, Addr 0xE000EFDC, Value 0x00000000
+  Item #4, AP 0, Addr 0xE000EFE0, Value 0x0000000C
+  Item #5, AP 0, Addr 0xE000EFE4, Value 0x000000B0
+  Item #6, AP 0, Addr 0xE000EFE8, Value 0x0000000B
+  Item #7, AP 0, Addr 0xE000EFEC, Value 0x00000000
+20:10:45:249 (18/03/2026) - WRITE MEM Access, AP 0x00000000, Addr 0xE000EDFC, Val 0x01000000, "DAP Write Memory (32 bit) - Success" - ID 13
+20:10:45:249 (18/03/2026) - ROM TABLE: Detected SCS (ARMv7-M with FP Extension) at address 0xE000E000 (PID 0x00000004000BB00C, CID 0xB105E00D)
+20:10:45:252 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE00FF004, Val 0xFFF02003, "DAP Read Memory (32 bit) - Success" - ID 14
+20:10:45:267 (18/03/2026) - READ  MEM BLOCK Access, AP 0x00000000, Start Addr 0xE0001FF0, End Addr 0xE0001FFF, "DAP Read Memory Block - Success" - ID 15
+  Item #0, AP 0, Addr 0xE0001FF0, Value 0x0000000D
+  Item #1, AP 0, Addr 0xE0001FF4, Value 0x000000E0
+  Item #2, AP 0, Addr 0xE0001FF8, Value 0x00000005
+  Item #3, AP 0, Addr 0xE0001FFC, Value 0x000000B1
+20:10:45:276 (18/03/2026) - READ  MEM BLOCK Access, AP 0x00000000, Start Addr 0xE0001FD0, End Addr 0xE0001FEF, "DAP Read Memory Block - Success" - ID 16
+  Item #0, AP 0, Addr 0xE0001FD0, Value 0x00000004
+  Item #1, AP 0, Addr 0xE0001FD4, Value 0x00000000
+  Item #2, AP 0, Addr 0xE0001FD8, Value 0x00000000
+  Item #3, AP 0, Addr 0xE0001FDC, Value 0x00000000
+  Item #4, AP 0, Addr 0xE0001FE0, Value 0x00000002
+  Item #5, AP 0, Addr 0xE0001FE4, Value 0x000000B0
+  Item #6, AP 0, Addr 0xE0001FE8, Value 0x0000003B
+  Item #7, AP 0, Addr 0xE0001FEC, Value 0x00000000
+20:10:45:276 (18/03/2026) - ROM TABLE: Detected DWT (ARMv7-M) at address 0xE0001000 (PID 0x00000004003BB002, CID 0xB105E00D)
+20:10:45:278 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE00FF008, Val 0xFFF03003, "DAP Read Memory (32 bit) - Success" - ID 17
+20:10:45:291 (18/03/2026) - READ  MEM BLOCK Access, AP 0x00000000, Start Addr 0xE0002FF0, End Addr 0xE0002FFF, "DAP Read Memory Block - Success" - ID 18
+  Item #0, AP 0, Addr 0xE0002FF0, Value 0x0000000D
+  Item #1, AP 0, Addr 0xE0002FF4, Value 0x000000E0
+  Item #2, AP 0, Addr 0xE0002FF8, Value 0x00000005
+  Item #3, AP 0, Addr 0xE0002FFC, Value 0x000000B1
+20:10:45:297 (18/03/2026) - READ  MEM BLOCK Access, AP 0x00000000, Start Addr 0xE0002FD0, End Addr 0xE0002FEF, "DAP Read Memory Block - Success" - ID 19
+  Item #0, AP 0, Addr 0xE0002FD0, Value 0x00000004
+  Item #1, AP 0, Addr 0xE0002FD4, Value 0x00000000
+  Item #2, AP 0, Addr 0xE0002FD8, Value 0x00000000
+  Item #3, AP 0, Addr 0xE0002FDC, Value 0x00000000
+  Item #4, AP 0, Addr 0xE0002FE0, Value 0x00000003
+  Item #5, AP 0, Addr 0xE0002FE4, Value 0x000000B0
+  Item #6, AP 0, Addr 0xE0002FE8, Value 0x0000002B
+  Item #7, AP 0, Addr 0xE0002FEC, Value 0x00000000
+20:10:45:297 (18/03/2026) - ROM TABLE: Detected FPB (ARMv7-M) at address 0xE0002000 (PID 0x00000004002BB003, CID 0xB105E00D)
+20:10:45:299 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE00FF00C, Val 0xFFF01003, "DAP Read Memory (32 bit) - Success" - ID 20
+20:10:45:308 (18/03/2026) - READ  MEM BLOCK Access, AP 0x00000000, Start Addr 0xE0000FF0, End Addr 0xE0000FFF, "DAP Read Memory Block - Success" - ID 21
+  Item #0, AP 0, Addr 0xE0000FF0, Value 0x0000000D
+  Item #1, AP 0, Addr 0xE0000FF4, Value 0x000000E0
+  Item #2, AP 0, Addr 0xE0000FF8, Value 0x00000005
+  Item #3, AP 0, Addr 0xE0000FFC, Value 0x000000B1
+20:10:45:320 (18/03/2026) - READ  MEM BLOCK Access, AP 0x00000000, Start Addr 0xE0000FD0, End Addr 0xE0000FEF, "DAP Read Memory Block - Success" - ID 22
+  Item #0, AP 0, Addr 0xE0000FD0, Value 0x00000004
+  Item #1, AP 0, Addr 0xE0000FD4, Value 0x00000000
+  Item #2, AP 0, Addr 0xE0000FD8, Value 0x00000000
+  Item #3, AP 0, Addr 0xE0000FDC, Value 0x00000000
+  Item #4, AP 0, Addr 0xE0000FE0, Value 0x00000001
+  Item #5, AP 0, Addr 0xE0000FE4, Value 0x000000B0
+  Item #6, AP 0, Addr 0xE0000FE8, Value 0x0000003B
+  Item #7, AP 0, Addr 0xE0000FEC, Value 0x00000000
+20:10:45:320 (18/03/2026) - ROM TABLE: Detected ITM (ARMv7-M) at address 0xE0000000 (PID 0x00000004003BB001, CID 0xB105E00D)
+20:10:45:324 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE00FF010, Val 0xFFF41003, "DAP Read Memory (32 bit) - Success" - ID 23
+20:10:45:330 (18/03/2026) - READ  MEM BLOCK Access, AP 0x00000000, Start Addr 0xE0040FF0, End Addr 0xE0040FFF, "DAP Read Memory Block - Success" - ID 24
+  Item #0, AP 0, Addr 0xE0040FF0, Value 0x0000000D
+  Item #1, AP 0, Addr 0xE0040FF4, Value 0x00000090
+  Item #2, AP 0, Addr 0xE0040FF8, Value 0x00000005
+  Item #3, AP 0, Addr 0xE0040FFC, Value 0x000000B1
+20:10:45:348 (18/03/2026) - READ  MEM BLOCK Access, AP 0x00000000, Start Addr 0xE0040FD0, End Addr 0xE0040FEF, "DAP Read Memory Block - Success" - ID 25
+  Item #0, AP 0, Addr 0xE0040FD0, Value 0x00000004
+  Item #1, AP 0, Addr 0xE0040FD4, Value 0x00000000
+  Item #2, AP 0, Addr 0xE0040FD8, Value 0x00000000
+  Item #3, AP 0, Addr 0xE0040FDC, Value 0x00000000
+  Item #4, AP 0, Addr 0xE0040FE0, Value 0x000000A1
+  Item #5, AP 0, Addr 0xE0040FE4, Value 0x000000B9
+  Item #6, AP 0, Addr 0xE0040FE8, Value 0x0000000B
+  Item #7, AP 0, Addr 0xE0040FEC, Value 0x00000000
+20:10:45:348 (18/03/2026) - ROM TABLE: Detected TPIU (Cortex-M4) at address 0xE0040000 (PID 0x00000004000BB9A1, CID 0xB105900D)
+20:10:45:350 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE00FF014, Val 0xFFF42003, "DAP Read Memory (32 bit) - Success" - ID 26
+20:10:45:356 (18/03/2026) - READ  MEM BLOCK Access, AP 0x00000000, Start Addr 0xE0041FF0, End Addr 0xE0041FFF, "DAP Read Memory Block - Success" - ID 27
+  Item #0, AP 0, Addr 0xE0041FF0, Value 0x0000000D
+  Item #1, AP 0, Addr 0xE0041FF4, Value 0x00000090
+  Item #2, AP 0, Addr 0xE0041FF8, Value 0x00000005
+  Item #3, AP 0, Addr 0xE0041FFC, Value 0x000000B1
+20:10:45:366 (18/03/2026) - READ  MEM BLOCK Access, AP 0x00000000, Start Addr 0xE0041FD0, End Addr 0xE0041FEF, "DAP Read Memory Block - Success" - ID 28
+  Item #0, AP 0, Addr 0xE0041FD0, Value 0x00000004
+  Item #1, AP 0, Addr 0xE0041FD4, Value 0x00000000
+  Item #2, AP 0, Addr 0xE0041FD8, Value 0x00000000
+  Item #3, AP 0, Addr 0xE0041FDC, Value 0x00000000
+  Item #4, AP 0, Addr 0xE0041FE0, Value 0x00000025
+  Item #5, AP 0, Addr 0xE0041FE4, Value 0x000000B9
+  Item #6, AP 0, Addr 0xE0041FE8, Value 0x0000000B
+  Item #7, AP 0, Addr 0xE0041FEC, Value 0x00000000
+20:10:45:366 (18/03/2026) - ROM TABLE: Detected ETM (Cortex-M4) at address 0xE0041000 (PID 0x00000004000BB925, CID 0xB105900D)
+20:10:45:370 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE00FF018, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 29
+20:10:45:373 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000ED00, Val 0x410FC241, "DAP Read Memory (32 bit) - Success" - ID 30
+20:10:45:375 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EF40, Val 0x10110021, "DAP Read Memory (32 bit) - Success" - ID 31
+20:10:45:378 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EF44, Val 0x11000011, "DAP Read Memory (32 bit) - Success" - ID 32
+20:10:45:381 (18/03/2026) - READ  DP  Access, Addr 0x00000004, Val 0xF0000F00, "DAP Read DP - Success" - ID 33
+20:10:45:385 (18/03/2026) - WRITE MEM Access, AP 0x00000000, Addr 0xE000EDFC, Val 0x00000001, "DAP Write Memory (32 bit) - Success" - ID 34
+20:10:45:390 (18/03/2026) - WRITE MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0xA05F0003, "DAP Write Memory (32 bit) - Success" - ID 35
+20:10:45:396 (18/03/2026) - WRITE MEM Access, AP 0x00000000, Addr 0xE000EDFC, Val 0xFFFFFFFF, "DAP Write Memory (32 bit) - FAILED" - ID 36
+20:10:47:116 (18/03/2026) - WRITE MEM BLOCK Access, AP 0x00000000, Start Addr 0xE0002000, End Addr 0xE0002007, "DAP Write Memory Block - Success" - ID 37
+  Item #0, AP 0, Addr 0xE0002000, Value 0x00000002
+  Item #1, AP 0, Addr 0xE0002004, Value 0x00000000
+20:10:47:119 (18/03/2026) - WRITE DP  Access, Addr 0x00000004, Val 0x00000000, "DAP Write DP - Success" - ID 38

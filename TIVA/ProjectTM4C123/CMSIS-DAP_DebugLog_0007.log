@@ -1,0 +1,451 @@
+CMSIS_AGDI.DLL - CMSIS-DAP Driver Log
+
+20:10:18:385 (18/03/2026) - WRITE DP  Access, Addr 0x00000008, Val 0x00000000, "DAP Write DP - Success" - ID 0
+20:10:18:391 (18/03/2026) - WRITE DP  Access, Addr 0x00000004, Val 0x50000000, "DAP Write DP - Success" - ID 1
+20:10:18:396 (18/03/2026) - READ  DP  Access, Addr 0x00000004, Val 0xF0000000, "DAP Read DP - Success" - ID 2
+20:10:18:398 (18/03/2026) - WRITE DP  Access, Addr 0x00000004, Val 0x50000F32, "DAP Write DP - Success" - ID 3
+20:10:18:407 (18/03/2026) - READ  AP  Access, AP 0x00000000, Addr 0x000000FC, Val 0x24770011, "DAP Read AP - Success" - ID 4
+20:10:18:408 (18/03/2026) - READ  AP  Access, AP 0x00000000, Addr 0x000000FC, Val 0x24770011, "JTAG Read AP - Success" - ID 5
+20:10:18:433 (18/03/2026) - WRITE AP  Access, AP 0x00000000, Addr 0x00000000, Val 0x23000052, "DAP Write AP - Success" - ID 6
+20:10:18:439 (18/03/2026) - READ  AP  Access, AP 0x00000000, Addr 0x000000F8, Val 0xE00FF003, "DAP Read AP - Success" - ID 7
+20:10:18:452 (18/03/2026) - READ  MEM BLOCK Access, AP 0x00000000, Start Addr 0xE00FFFF0, End Addr 0xE00FFFFF, "DAP Read Memory Block - Success" - ID 8
+  Item #0, AP 0, Addr 0xE00FFFF0, Value 0x0000000D
+  Item #1, AP 0, Addr 0xE00FFFF4, Value 0x00000010
+  Item #2, AP 0, Addr 0xE00FFFF8, Value 0x00000005
+  Item #3, AP 0, Addr 0xE00FFFFC, Value 0x000000B1
+20:10:18:463 (18/03/2026) - READ  MEM BLOCK Access, AP 0x00000000, Start Addr 0xE00FFFD0, End Addr 0xE00FFFEF, "DAP Read Memory Block - Success" - ID 9
+  Item #0, AP 0, Addr 0xE00FFFD0, Value 0x00000004
+  Item #1, AP 0, Addr 0xE00FFFD4, Value 0x00000000
+  Item #2, AP 0, Addr 0xE00FFFD8, Value 0x00000000
+  Item #3, AP 0, Addr 0xE00FFFDC, Value 0x00000000
+  Item #4, AP 0, Addr 0xE00FFFE0, Value 0x000000C4
+  Item #5, AP 0, Addr 0xE00FFFE4, Value 0x000000B4
+  Item #6, AP 0, Addr 0xE00FFFE8, Value 0x0000000B
+  Item #7, AP 0, Addr 0xE00FFFEC, Value 0x00000000
+20:10:18:463 (18/03/2026) - ROM TABLE: Detected ROM Table (Cortex-M4) at address 0xE00FF000 (PID 0x00000004000BB4C4, CID 0xB105100D)
+20:10:18:467 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE00FF000, Val 0xFFF0F003, "DAP Read Memory (32 bit) - Success" - ID 10
+20:10:18:475 (18/03/2026) - READ  MEM BLOCK Access, AP 0x00000000, Start Addr 0xE000EFF0, End Addr 0xE000EFFF, "DAP Read Memory Block - Success" - ID 11
+  Item #0, AP 0, Addr 0xE000EFF0, Value 0x0000000D
+  Item #1, AP 0, Addr 0xE000EFF4, Value 0x000000E0
+  Item #2, AP 0, Addr 0xE000EFF8, Value 0x00000005
+  Item #3, AP 0, Addr 0xE000EFFC, Value 0x000000B1
+20:10:18:486 (18/03/2026) - READ  MEM BLOCK Access, AP 0x00000000, Start Addr 0xE000EFD0, End Addr 0xE000EFEF, "DAP Read Memory Block - Success" - ID 12
+  Item #0, AP 0, Addr 0xE000EFD0, Value 0x00000004
+  Item #1, AP 0, Addr 0xE000EFD4, Value 0x00000000
+  Item #2, AP 0, Addr 0xE000EFD8, Value 0x00000000
+  Item #3, AP 0, Addr 0xE000EFDC, Value 0x00000000
+  Item #4, AP 0, Addr 0xE000EFE0, Value 0x0000000C
+  Item #5, AP 0, Addr 0xE000EFE4, Value 0x000000B0
+  Item #6, AP 0, Addr 0xE000EFE8, Value 0x0000000B
+  Item #7, AP 0, Addr 0xE000EFEC, Value 0x00000000
+20:10:18:489 (18/03/2026) - WRITE MEM Access, AP 0x00000000, Addr 0xE000EDFC, Val 0x01000000, "DAP Write Memory (32 bit) - Success" - ID 13
+20:10:18:489 (18/03/2026) - ROM TABLE: Detected SCS (ARMv7-M with FP Extension) at address 0xE000E000 (PID 0x00000004000BB00C, CID 0xB105E00D)
+20:10:18:493 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE00FF004, Val 0xFFF02003, "DAP Read Memory (32 bit) - Success" - ID 14
+20:10:18:501 (18/03/2026) - READ  MEM BLOCK Access, AP 0x00000000, Start Addr 0xE0001FF0, End Addr 0xE0001FFF, "DAP Read Memory Block - Success" - ID 15
+  Item #0, AP 0, Addr 0xE0001FF0, Value 0x0000000D
+  Item #1, AP 0, Addr 0xE0001FF4, Value 0x000000E0
+  Item #2, AP 0, Addr 0xE0001FF8, Value 0x00000005
+  Item #3, AP 0, Addr 0xE0001FFC, Value 0x000000B1
+20:10:18:510 (18/03/2026) - READ  MEM BLOCK Access, AP 0x00000000, Start Addr 0xE0001FD0, End Addr 0xE0001FEF, "DAP Read Memory Block - Success" - ID 16
+  Item #0, AP 0, Addr 0xE0001FD0, Value 0x00000004
+  Item #1, AP 0, Addr 0xE0001FD4, Value 0x00000000
+  Item #2, AP 0, Addr 0xE0001FD8, Value 0x00000000
+  Item #3, AP 0, Addr 0xE0001FDC, Value 0x00000000
+  Item #4, AP 0, Addr 0xE0001FE0, Value 0x00000002
+  Item #5, AP 0, Addr 0xE0001FE4, Value 0x000000B0
+  Item #6, AP 0, Addr 0xE0001FE8, Value 0x0000003B
+  Item #7, AP 0, Addr 0xE0001FEC, Value 0x00000000
+20:10:18:510 (18/03/2026) - ROM TABLE: Detected DWT (ARMv7-M) at address 0xE0001000 (PID 0x00000004003BB002, CID 0xB105E00D)
+20:10:18:518 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE00FF008, Val 0xFFF03003, "DAP Read Memory (32 bit) - Success" - ID 17
+20:10:18:524 (18/03/2026) - READ  MEM BLOCK Access, AP 0x00000000, Start Addr 0xE0002FF0, End Addr 0xE0002FFF, "DAP Read Memory Block - Success" - ID 18
+  Item #0, AP 0, Addr 0xE0002FF0, Value 0x0000000D
+  Item #1, AP 0, Addr 0xE0002FF4, Value 0x000000E0
+  Item #2, AP 0, Addr 0xE0002FF8, Value 0x00000005
+  Item #3, AP 0, Addr 0xE0002FFC, Value 0x000000B1
+20:10:18:532 (18/03/2026) - READ  MEM BLOCK Access, AP 0x00000000, Start Addr 0xE0002FD0, End Addr 0xE0002FEF, "DAP Read Memory Block - Success" - ID 19
+  Item #0, AP 0, Addr 0xE0002FD0, Value 0x00000004
+  Item #1, AP 0, Addr 0xE0002FD4, Value 0x00000000
+  Item #2, AP 0, Addr 0xE0002FD8, Value 0x00000000
+  Item #3, AP 0, Addr 0xE0002FDC, Value 0x00000000
+  Item #4, AP 0, Addr 0xE0002FE0, Value 0x00000003
+  Item #5, AP 0, Addr 0xE0002FE4, Value 0x000000B0
+  Item #6, AP 0, Addr 0xE0002FE8, Value 0x0000002B
+  Item #7, AP 0, Addr 0xE0002FEC, Value 0x00000000
+20:10:18:532 (18/03/2026) - ROM TABLE: Detected FPB (ARMv7-M) at address 0xE0002000 (PID 0x00000004002BB003, CID 0xB105E00D)
+20:10:18:540 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE00FF00C, Val 0xFFF01003, "DAP Read Memory (32 bit) - Success" - ID 20
+20:10:18:547 (18/03/2026) - READ  MEM BLOCK Access, AP 0x00000000, Start Addr 0xE0000FF0, End Addr 0xE0000FFF, "DAP Read Memory Block - Success" - ID 21
+  Item #0, AP 0, Addr 0xE0000FF0, Value 0x0000000D
+  Item #1, AP 0, Addr 0xE0000FF4, Value 0x000000E0
+  Item #2, AP 0, Addr 0xE0000FF8, Value 0x00000005
+  Item #3, AP 0, Addr 0xE0000FFC, Value 0x000000B1
+20:10:18:554 (18/03/2026) - READ  MEM BLOCK Access, AP 0x00000000, Start Addr 0xE0000FD0, End Addr 0xE0000FEF, "DAP Read Memory Block - Success" - ID 22
+  Item #0, AP 0, Addr 0xE0000FD0, Value 0x00000004
+  Item #1, AP 0, Addr 0xE0000FD4, Value 0x00000000
+  Item #2, AP 0, Addr 0xE0000FD8, Value 0x00000000
+  Item #3, AP 0, Addr 0xE0000FDC, Value 0x00000000
+  Item #4, AP 0, Addr 0xE0000FE0, Value 0x00000001
+  Item #5, AP 0, Addr 0xE0000FE4, Value 0x000000B0
+  Item #6, AP 0, Addr 0xE0000FE8, Value 0x0000003B
+  Item #7, AP 0, Addr 0xE0000FEC, Value 0x00000000
+20:10:18:554 (18/03/2026) - ROM TABLE: Detected ITM (ARMv7-M) at address 0xE0000000 (PID 0x00000004003BB001, CID 0xB105E00D)
+20:10:18:555 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE00FF010, Val 0xFFF41003, "DAP Read Memory (32 bit) - Success" - ID 23
+20:10:18:566 (18/03/2026) - READ  MEM BLOCK Access, AP 0x00000000, Start Addr 0xE0040FF0, End Addr 0xE0040FFF, "DAP Read Memory Block - Success" - ID 24
+  Item #0, AP 0, Addr 0xE0040FF0, Value 0x0000000D
+  Item #1, AP 0, Addr 0xE0040FF4, Value 0x00000090
+  Item #2, AP 0, Addr 0xE0040FF8, Value 0x00000005
+  Item #3, AP 0, Addr 0xE0040FFC, Value 0x000000B1
+20:10:18:575 (18/03/2026) - READ  MEM BLOCK Access, AP 0x00000000, Start Addr 0xE0040FD0, End Addr 0xE0040FEF, "DAP Read Memory Block - Success" - ID 25
+  Item #0, AP 0, Addr 0xE0040FD0, Value 0x00000004
+  Item #1, AP 0, Addr 0xE0040FD4, Value 0x00000000
+  Item #2, AP 0, Addr 0xE0040FD8, Value 0x00000000
+  Item #3, AP 0, Addr 0xE0040FDC, Value 0x00000000
+  Item #4, AP 0, Addr 0xE0040FE0, Value 0x000000A1
+  Item #5, AP 0, Addr 0xE0040FE4, Value 0x000000B9
+  Item #6, AP 0, Addr 0xE0040FE8, Value 0x0000000B
+  Item #7, AP 0, Addr 0xE0040FEC, Value 0x00000000
+20:10:18:575 (18/03/2026) - ROM TABLE: Detected TPIU (Cortex-M4) at address 0xE0040000 (PID 0x00000004000BB9A1, CID 0xB105900D)
+20:10:18:581 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE00FF014, Val 0xFFF42003, "DAP Read Memory (32 bit) - Success" - ID 26
+20:10:18:591 (18/03/2026) - READ  MEM BLOCK Access, AP 0x00000000, Start Addr 0xE0041FF0, End Addr 0xE0041FFF, "DAP Read Memory Block - Success" - ID 27
+  Item #0, AP 0, Addr 0xE0041FF0, Value 0x0000000D
+  Item #1, AP 0, Addr 0xE0041FF4, Value 0x00000090
+  Item #2, AP 0, Addr 0xE0041FF8, Value 0x00000005
+  Item #3, AP 0, Addr 0xE0041FFC, Value 0x000000B1
+20:10:18:598 (18/03/2026) - READ  MEM BLOCK Access, AP 0x00000000, Start Addr 0xE0041FD0, End Addr 0xE0041FEF, "DAP Read Memory Block - Success" - ID 28
+  Item #0, AP 0, Addr 0xE0041FD0, Value 0x00000004
+  Item #1, AP 0, Addr 0xE0041FD4, Value 0x00000000
+  Item #2, AP 0, Addr 0xE0041FD8, Value 0x00000000
+  Item #3, AP 0, Addr 0xE0041FDC, Value 0x00000000
+  Item #4, AP 0, Addr 0xE0041FE0, Value 0x00000025
+  Item #5, AP 0, Addr 0xE0041FE4, Value 0x000000B9
+  Item #6, AP 0, Addr 0xE0041FE8, Value 0x0000000B
+  Item #7, AP 0, Addr 0xE0041FEC, Value 0x00000000
+20:10:18:598 (18/03/2026) - ROM TABLE: Detected ETM (Cortex-M4) at address 0xE0041000 (PID 0x00000004000BB925, CID 0xB105900D)
+20:10:18:600 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE00FF018, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 29
+20:10:18:606 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000ED00, Val 0x410FC241, "DAP Read Memory (32 bit) - Success" - ID 30
+20:10:18:613 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EF40, Val 0x10110021, "DAP Read Memory (32 bit) - Success" - ID 31
+20:10:18:620 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EF44, Val 0x11000011, "DAP Read Memory (32 bit) - Success" - ID 32
+20:10:18:623 (18/03/2026) - READ  DP  Access, Addr 0x00000004, Val 0xF0000F00, "DAP Read DP - Success" - ID 33
+20:10:18:625 (18/03/2026) - WRITE MEM Access, AP 0x00000000, Addr 0xE000EDFC, Val 0x00000001, "DAP Write Memory (32 bit) - Success" - ID 34
+20:10:18:630 (18/03/2026) - WRITE MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0xA05F0003, "DAP Write Memory (32 bit) - Success" - ID 35
+20:10:18:633 (18/03/2026) - WRITE MEM Access, AP 0x00000000, Addr 0xE000EDFC, Val 0x01000001, "DAP Write Memory (32 bit) - Success" - ID 36
+20:10:18:635 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE0002000, Val 0x00000260, "DAP Read Memory (32 bit) - Success" - ID 37
+20:10:18:640 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE0001000, Val 0x40000000, "DAP Read Memory (32 bit) - Success" - ID 38
+20:10:18:643 (18/03/2026) - WRITE MEM Access, AP 0x00000000, Addr 0xE0001024, Val 0x0000001F, "DAP Write Memory (32 bit) - Success" - ID 39
+20:10:18:647 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE0001024, Val 0x0000000F, "DAP Read Memory (32 bit) - Success" - ID 40
+20:10:18:649 (18/03/2026) - WRITE MEM Access, AP 0x00000000, Addr 0xE0001024, Val 0x00000000, "DAP Write Memory (32 bit) - Success" - ID 41
+20:10:18:651 (18/03/2026) - WRITE MEM Access, AP 0x00000000, Addr 0xE0001028, Val 0x00000100, "DAP Write Memory (32 bit) - Success" - ID 42
+20:10:18:654 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE0001028, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 43
+20:10:18:657 (18/03/2026) - WRITE MEM Access, AP 0x00000000, Addr 0xE0001028, Val 0x00000080, "DAP Write Memory (32 bit) - Success" - ID 44
+20:10:18:660 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE0001028, Val 0x00000080, "DAP Read Memory (32 bit) - Success" - ID 45
+20:10:18:662 (18/03/2026) - WRITE MEM Access, AP 0x00000000, Addr 0xE0001028, Val 0x00000000, "DAP Write Memory (32 bit) - Success" - ID 46
+20:10:18:665 (18/03/2026) - WRITE MEM Access, AP 0x00000000, Addr 0xE0001038, Val 0x00000100, "DAP Write Memory (32 bit) - Success" - ID 47
+20:10:18:670 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE0001038, Val 0x00000300, "DAP Read Memory (32 bit) - Success" - ID 48
+20:10:18:672 (18/03/2026) - WRITE MEM Access, AP 0x00000000, Addr 0xE0001038, Val 0x00000080, "DAP Write Memory (32 bit) - Success" - ID 49
+20:10:18:674 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE0001038, Val 0x00000200, "DAP Read Memory (32 bit) - Success" - ID 50
+20:10:18:676 (18/03/2026) - WRITE MEM Access, AP 0x00000000, Addr 0xE0001038, Val 0x00000000, "DAP Write Memory (32 bit) - Success" - ID 51
+20:10:18:678 (18/03/2026) - WRITE MEM Access, AP 0x00000000, Addr 0xE0001048, Val 0x00000100, "DAP Write Memory (32 bit) - Success" - ID 52
+20:10:18:680 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE0001048, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 53
+20:10:18:684 (18/03/2026) - WRITE MEM Access, AP 0x00000000, Addr 0xE0001048, Val 0x00000080, "DAP Write Memory (32 bit) - Success" - ID 54
+20:10:18:686 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE0001048, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 55
+20:10:18:689 (18/03/2026) - WRITE MEM Access, AP 0x00000000, Addr 0xE0001048, Val 0x00000000, "DAP Write Memory (32 bit) - Success" - ID 56
+20:10:18:692 (18/03/2026) - WRITE MEM Access, AP 0x00000000, Addr 0xE0001058, Val 0x00000100, "DAP Write Memory (32 bit) - Success" - ID 57
+20:10:18:693 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE0001058, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 58
+20:10:18:698 (18/03/2026) - WRITE MEM Access, AP 0x00000000, Addr 0xE0001058, Val 0x00000080, "DAP Write Memory (32 bit) - Success" - ID 59
+20:10:18:700 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE0001058, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 60
+20:10:18:702 (18/03/2026) - WRITE MEM Access, AP 0x00000000, Addr 0xE0001058, Val 0x00000000, "DAP Write Memory (32 bit) - Success" - ID 61
+20:10:18:704 (18/03/2026) - WRITE MEM Access, AP 0x00000000, Addr 0xE0002000, Val 0x00000002, "DAP Write Memory (32 bit) - Success" - ID 62
+20:10:18:706 (18/03/2026) - WRITE MEM Access, AP 0x00000000, Addr 0xE0001028, Val 0x00000000, "DAP Write Memory (32 bit) - Success" - ID 63
+20:10:18:711 (18/03/2026) - WRITE MEM Access, AP 0x00000000, Addr 0xE0001038, Val 0x00000000, "DAP Write Memory (32 bit) - Success" - ID 64
+20:10:18:716 (18/03/2026) - WRITE MEM Access, AP 0x00000000, Addr 0xE0001048, Val 0x00000000, "DAP Write Memory (32 bit) - Success" - ID 65
+20:10:18:720 (18/03/2026) - WRITE MEM Access, AP 0x00000000, Addr 0xE0001058, Val 0x00000000, "DAP Write Memory (32 bit) - Success" - ID 66
+20:10:18:723 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000E004, Val 0x00000004, "DAP Read Memory (32 bit) - Success" - ID 67
+20:10:18:729 (18/03/2026) - WRITE MEM BLOCK Access, AP 0x00000000, Start Addr 0xE0001000, End Addr 0xE000101B, "DAP Write Memory Block - Success" - ID 68
+  Item #0, AP 0, Addr 0xE0001000, Value 0x00000001
+  Item #1, AP 0, Addr 0xE0001004, Value 0x00000000
+  Item #2, AP 0, Addr 0xE0001008, Value 0x00000000
+  Item #3, AP 0, Addr 0xE000100C, Value 0x00000000
+  Item #4, AP 0, Addr 0xE0001010, Value 0x00000000
+  Item #5, AP 0, Addr 0xE0001014, Value 0x00000000
+  Item #6, AP 0, Addr 0xE0001018, Value 0x00000000
+20:10:18:732 (18/03/2026) - WRITE MEM Access, AP 0x00000000, Addr 0xE000EDFC, Val 0x00000001, "DAP Write Memory (32 bit) - Success" - ID 69
+20:10:18:737 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x03030003, "DAP Read Memory (32 bit) - Success" - ID 70
+20:10:18:743 (18/03/2026) - WRITE MEM Access, AP 0x00000000, Addr 0xE000ED0C, Val 0x05FA0004, "DAP Write Memory (32 bit) - Success" - ID 71
+20:10:18:746 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x02030003, "DAP Read Memory (32 bit) - Success" - ID 72
+20:10:18:750 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00030003, "DAP Read Memory (32 bit) - Success" - ID 73
+20:10:18:752 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00030003, "DAP Read Memory (32 bit) - Success" - ID 74
+20:10:18:754 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00030003, "DAP Read Memory (32 bit) - Success" - ID 75
+20:10:18:763 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00030003, "DAP Read Memory (32 bit) - Success" - ID 76
+20:10:18:805 (18/03/2026) - WRITE MEM BLOCK Access, AP 0x00000000, Start Addr 0x20000000, End Addr 0x20000127, "DAP Write Memory Block - Success" - ID 77
+  Item #0, AP 0, Addr 0x20000000, Value 0xE00ABE00
+  Item #1, AP 0, Addr 0x20000004, Value 0x062D780D
+  Item #2, AP 0, Addr 0x20000008, Value 0x24084068
+  Item #3, AP 0, Addr 0x2000000C, Value 0xD3000040
+  Item #4, AP 0, Addr 0x20000010, Value 0x1E644058
+  Item #5, AP 0, Addr 0x20000014, Value 0x1C49D1FA
+  Item #6, AP 0, Addr 0x20000018, Value 0x2A001E52
+  Item #7, AP 0, Addr 0x2000001C, Value 0x4770D1F2
+  Item #8, AP 0, Addr 0x20000020, Value 0x7803E005
+  Item #9, AP 0, Addr 0x20000024, Value 0x42931C40
+  Item #10, AP 0, Addr 0x20000028, Value 0x2001D001
+  Item #11, AP 0, Addr 0x2000002C, Value 0x1E494770
+  Item #12, AP 0, Addr 0x20000030, Value 0x2000D2F7
+  Item #13, AP 0, Addr 0x20000034, Value 0x00004770
+  Item #14, AP 0, Addr 0x20000038, Value 0x49340A88
+  Item #15, AP 0, Addr 0x2000003C, Value 0x0D004348
+  Item #16, AP 0, Addr 0x20000040, Value 0x1E404933
+  Item #17, AP 0, Addr 0x20000044, Value 0x49326008
+  Item #18, AP 0, Addr 0x20000048, Value 0x39802001
+  Item #19, AP 0, Addr 0x2000004C, Value 0x20006308
+  Item #20, AP 0, Addr 0x20000050, Value 0x20004770
+  Item #21, AP 0, Addr 0x20000054, Value 0x482F4770
+  Item #22, AP 0, Addr 0x20000058, Value 0x61412101
+  Item #23, AP 0, Addr 0x2000005C, Value 0x6081492E
+  Item #24, AP 0, Addr 0x20000060, Value 0x07496881
+  Item #25, AP 0, Addr 0x20000064, Value 0x68C0D4FC
+  Item #26, AP 0, Addr 0x20000068, Value 0xD00007C0
+  Item #27, AP 0, Addr 0x2000006C, Value 0x47702001
+  Item #28, AP 0, Addr 0x20000070, Value 0xD10C0581
+  Item #29, AP 0, Addr 0x20000074, Value 0x22014927
+  Item #30, AP 0, Addr 0x20000078, Value 0x6008614A
+  Item #31, AP 0, Addr 0x2000007C, Value 0x1E804826
+  Item #32, AP 0, Addr 0x20000080, Value 0x68886088
+  Item #33, AP 0, Addr 0x20000084, Value 0xD4FC0780
+  Item #34, AP 0, Addr 0x20000088, Value 0x07C068C8
+  Item #35, AP 0, Addr 0x2000008C, Value 0x2001D000
+  Item #36, AP 0, Addr 0x20000090, Value 0xB5F04770
+  Item #37, AP 0, Addr 0x20000094, Value 0xD1370783
+  Item #38, AP 0, Addr 0x20000098, Value 0x08891CC9
+  Item #39, AP 0, Addr 0x2000009C, Value 0x4D1D0089
+  Item #40, AP 0, Addr 0x200000A0, Value 0x616B2301
+  Item #41, AP 0, Addr 0x200000A4, Value 0x33404B1A
+  Item #42, AP 0, Addr 0x200000A8, Value 0x4C1C6A1B
+  Item #43, AP 0, Addr 0x200000AC, Value 0xD02607DB
+  Item #44, AP 0, Addr 0x200000B0, Value 0x237C4E1B
+  Item #45, AP 0, Addr 0x200000B4, Value 0xD0242900
+  Item #46, AP 0, Addr 0x200000B8, Value 0x01E409C4
+  Item #47, AP 0, Addr 0x200000BC, Value 0xE006602C
+  Item #48, AP 0, Addr 0x200000C0, Value 0xCA104607
+  Item #49, AP 0, Addr 0x200000C4, Value 0x19BF401F
+  Item #50, AP 0, Addr 0x200000C8, Value 0x1D00603C
+  Item #51, AP 0, Addr 0x200000CC, Value 0x06441F09
+  Item #52, AP 0, Addr 0x200000D0, Value 0xD1020EE4
+  Item #53, AP 0, Addr 0x200000D4, Value 0x2C006B2C
+  Item #54, AP 0, Addr 0x200000D8, Value 0x2900D101
+  Item #55, AP 0, Addr 0x200000DC, Value 0x4C0FD1F0
+  Item #56, AP 0, Addr 0x200000E0, Value 0x6A2C622C
+  Item #57, AP 0, Addr 0x200000E4, Value 0xD1FC07E4
+  Item #58, AP 0, Addr 0x200000E8, Value 0x6028E7E4
+  Item #59, AP 0, Addr 0x200000EC, Value 0x606B6813
+  Item #60, AP 0, Addr 0x200000F0, Value 0x68AB60AC
+  Item #61, AP 0, Addr 0x200000F4, Value 0xD1FC07DB
+  Item #62, AP 0, Addr 0x200000F8, Value 0x1D121D00
+  Item #63, AP 0, Addr 0x200000FC, Value 0x29001F09
+  Item #64, AP 0, Addr 0x20000100, Value 0x68E8D1F3
+  Item #65, AP 0, Addr 0x20000104, Value 0xD00007C0
+  Item #66, AP 0, Addr 0x20000108, Value 0xBDF02001
+  Item #67, AP 0, Addr 0x2000010C, Value 0x00000432
+  Item #68, AP 0, Addr 0x20000110, Value 0x400FE140
+  Item #69, AP 0, Addr 0x20000114, Value 0x400FD000
+  Item #70, AP 0, Addr 0x20000118, Value 0xA4420004
+  Item #71, AP 0, Addr 0x2000011C, Value 0xA4420001
+  Item #72, AP 0, Addr 0x20000120, Value 0x400FD100
+  Item #73, AP 0, Addr 0x20000124, Value 0x00000000
+20:10:18:820 (18/03/2026) - READ  MEM BLOCK Access, AP 0x00000000, Start Addr 0x20000000, End Addr 0x20000127, "DAP Read Memory Block - Success" - ID 78
+  Item #0, AP 0, Addr 0x20000000, Value 0xE00ABE00
+  Item #1, AP 0, Addr 0x20000004, Value 0x062D780D
+  Item #2, AP 0, Addr 0x20000008, Value 0x24084068
+  Item #3, AP 0, Addr 0x2000000C, Value 0xD3000040
+  Item #4, AP 0, Addr 0x20000010, Value 0x1E644058
+  Item #5, AP 0, Addr 0x20000014, Value 0x1C49D1FA
+  Item #6, AP 0, Addr 0x20000018, Value 0x2A001E52
+  Item #7, AP 0, Addr 0x2000001C, Value 0x4770D1F2
+  Item #8, AP 0, Addr 0x20000020, Value 0x7803E005
+  Item #9, AP 0, Addr 0x20000024, Value 0x42931C40
+  Item #10, AP 0, Addr 0x20000028, Value 0x2001D001
+  Item #11, AP 0, Addr 0x2000002C, Value 0x1E494770
+  Item #12, AP 0, Addr 0x20000030, Value 0x2000D2F7
+  Item #13, AP 0, Addr 0x20000034, Value 0x00004770
+  Item #14, AP 0, Addr 0x20000038, Value 0x49340A88
+  Item #15, AP 0, Addr 0x2000003C, Value 0x0D004348
+  Item #16, AP 0, Addr 0x20000040, Value 0x1E404933
+  Item #17, AP 0, Addr 0x20000044, Value 0x49326008
+  Item #18, AP 0, Addr 0x20000048, Value 0x39802001
+  Item #19, AP 0, Addr 0x2000004C, Value 0x20006308
+  Item #20, AP 0, Addr 0x20000050, Value 0x20004770
+  Item #21, AP 0, Addr 0x20000054, Value 0x482F4770
+  Item #22, AP 0, Addr 0x20000058, Value 0x61412101
+  Item #23, AP 0, Addr 0x2000005C, Value 0x6081492E
+  Item #24, AP 0, Addr 0x20000060, Value 0x07496881
+  Item #25, AP 0, Addr 0x20000064, Value 0x68C0D4FC
+  Item #26, AP 0, Addr 0x20000068, Value 0xD00007C0
+  Item #27, AP 0, Addr 0x2000006C, Value 0x47702001
+  Item #28, AP 0, Addr 0x20000070, Value 0xD10C0581
+  Item #29, AP 0, Addr 0x20000074, Value 0x22014927
+  Item #30, AP 0, Addr 0x20000078, Value 0x6008614A
+  Item #31, AP 0, Addr 0x2000007C, Value 0x1E804826
+  Item #32, AP 0, Addr 0x20000080, Value 0x68886088
+  Item #33, AP 0, Addr 0x20000084, Value 0xD4FC0780
+  Item #34, AP 0, Addr 0x20000088, Value 0x07C068C8
+  Item #35, AP 0, Addr 0x2000008C, Value 0x2001D000
+  Item #36, AP 0, Addr 0x20000090, Value 0xB5F04770
+  Item #37, AP 0, Addr 0x20000094, Value 0xD1370783
+  Item #38, AP 0, Addr 0x20000098, Value 0x08891CC9
+  Item #39, AP 0, Addr 0x2000009C, Value 0x4D1D0089
+  Item #40, AP 0, Addr 0x200000A0, Value 0x616B2301
+  Item #41, AP 0, Addr 0x200000A4, Value 0x33404B1A
+  Item #42, AP 0, Addr 0x200000A8, Value 0x4C1C6A1B
+  Item #43, AP 0, Addr 0x200000AC, Value 0xD02607DB
+  Item #44, AP 0, Addr 0x200000B0, Value 0x237C4E1B
+  Item #45, AP 0, Addr 0x200000B4, Value 0xD0242900
+  Item #46, AP 0, Addr 0x200000B8, Value 0x01E409C4
+  Item #47, AP 0, Addr 0x200000BC, Value 0xE006602C
+  Item #48, AP 0, Addr 0x200000C0, Value 0xCA104607
+  Item #49, AP 0, Addr 0x200000C4, Value 0x19BF401F
+  Item #50, AP 0, Addr 0x200000C8, Value 0x1D00603C
+  Item #51, AP 0, Addr 0x200000CC, Value 0x06441F09
+  Item #52, AP 0, Addr 0x200000D0, Value 0xD1020EE4
+  Item #53, AP 0, Addr 0x200000D4, Value 0x2C006B2C
+  Item #54, AP 0, Addr 0x200000D8, Value 0x2900D101
+  Item #55, AP 0, Addr 0x200000DC, Value 0x4C0FD1F0
+  Item #56, AP 0, Addr 0x200000E0, Value 0x6A2C622C
+  Item #57, AP 0, Addr 0x200000E4, Value 0xD1FC07E4
+  Item #58, AP 0, Addr 0x200000E8, Value 0x6028E7E4
+  Item #59, AP 0, Addr 0x200000EC, Value 0x606B6813
+  Item #60, AP 0, Addr 0x200000F0, Value 0x68AB60AC
+  Item #61, AP 0, Addr 0x200000F4, Value 0xD1FC07DB
+  Item #62, AP 0, Addr 0x200000F8, Value 0x1D121D00
+  Item #63, AP 0, Addr 0x200000FC, Value 0x29001F09
+  Item #64, AP 0, Addr 0x20000100, Value 0x68E8D1F3
+  Item #65, AP 0, Addr 0x20000104, Value 0xD00007C0
+  Item #66, AP 0, Addr 0x20000108, Value 0xBDF02001
+  Item #67, AP 0, Addr 0x2000010C, Value 0x00000432
+  Item #68, AP 0, Addr 0x20000110, Value 0x400FE140
+  Item #69, AP 0, Addr 0x20000114, Value 0x400FD000
+  Item #70, AP 0, Addr 0x20000118, Value 0xA4420004
+  Item #71, AP 0, Addr 0x2000011C, Value 0xA4420001
+  Item #72, AP 0, Addr 0x20000120, Value 0x400FD100
+  Item #73, AP 0, Addr 0x20000124, Value 0x00000000
+20:10:18:852 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x01030003, "DAP Read Memory (32 bit) - Success" - ID 79
+20:10:18:876 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x01030003, "DAP Read Memory (32 bit) - Success" - ID 80
+20:10:18:905 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x01030003, "DAP Read Memory (32 bit) - Success" - ID 81
+20:10:18:935 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x01030003, "DAP Read Memory (32 bit) - Success" - ID 82
+20:10:18:962 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 83
+20:10:18:965 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 84
+20:10:18:968 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 85
+20:10:18:978 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 86
+20:10:18:982 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 87
+20:10:18:985 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 88
+20:10:18:991 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 89
+20:10:18:993 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 90
+20:10:18:995 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 91
+20:10:18:999 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 92
+20:10:19:000 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 93
+20:10:19:005 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 94
+20:10:19:007 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 95
+20:10:19:009 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 96
+20:10:19:010 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 97
+20:10:19:013 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 98
+20:10:19:017 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 99
+20:10:19:020 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 100
+20:10:19:022 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 101
+20:10:19:024 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 102
+20:10:19:026 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 103
+20:10:19:035 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 104
+20:10:19:040 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 105
+20:10:19:043 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 106
+20:10:19:047 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 107
+20:10:19:050 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 108
+20:10:19:053 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 109
+20:10:19:059 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 110
+20:10:19:065 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 111
+20:10:19:070 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 112
+20:10:19:072 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 113
+20:10:19:077 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 114
+20:10:19:079 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 115
+20:10:19:084 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 116
+20:10:19:086 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 117
+20:10:19:089 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 118
+20:10:19:094 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 119
+20:10:19:097 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 120
+20:10:19:099 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 121
+20:10:19:102 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 122
+20:10:19:104 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 123
+20:10:19:107 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 124
+20:10:19:117 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 125
+20:10:19:120 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 126
+20:10:19:125 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 127
+20:10:19:132 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 128
+20:10:19:137 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 129
+20:10:19:144 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 130
+20:10:19:150 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 131
+20:10:19:154 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 132
+20:10:19:157 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 133
+20:10:19:164 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 134
+20:10:19:167 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 135
+20:10:19:172 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 136
+20:10:19:178 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 137
+20:10:19:182 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 138
+20:10:19:185 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 139
+20:10:19:188 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 140
+20:10:19:196 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 141
+20:10:19:198 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 142
+20:10:19:202 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 143
+20:10:19:206 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 144
+20:10:19:209 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 145
+20:10:19:213 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 146
+20:10:19:218 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 147
+20:10:19:220 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 148
+20:10:19:223 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 149
+20:10:19:230 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 150
+20:10:19:235 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 151
+20:10:19:244 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 152
+20:10:19:249 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 153
+20:10:19:260 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 154
+20:10:19:266 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 155
+20:10:19:270 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 156
+20:10:19:274 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 157
+20:10:19:279 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 158
+20:10:19:284 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 159
+20:10:19:288 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 160
+20:10:19:291 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 161
+20:10:19:298 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 162
+20:10:19:302 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 163
+20:10:19:306 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 164
+20:10:19:310 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 165
+20:10:19:312 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 166
+20:10:19:319 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 167
+20:10:19:324 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 168
+20:10:19:327 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 169
+20:10:19:330 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 170
+20:10:19:332 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 171
+20:10:19:336 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 172
+20:10:19:339 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 173
+20:10:19:342 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 174
+20:10:19:343 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 175
+20:10:19:346 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 176
+20:10:19:350 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 177
+20:10:19:354 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 178
+20:10:19:358 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 179
+20:10:19:369 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 180
+20:10:19:371 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 181
+20:10:19:377 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 182
+20:10:19:379 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 183
+20:10:19:382 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 184
+20:10:19:384 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 185
+20:10:19:386 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 186
+20:10:19:390 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 187
+20:10:19:393 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 188
+20:10:19:403 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 189
+20:10:19:405 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 190
+20:10:19:409 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 191
+20:10:19:412 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 192
+20:10:19:417 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 193
+20:10:19:420 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 194
+20:10:19:423 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 195
+20:10:19:430 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 196
+20:10:19:439 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 197
+20:10:19:444 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 198
+20:10:19:446 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 199
+20:10:23:366 (18/03/2026) - READ  MEM Access, AP 0x00000000, Addr 0xE000EDF0, Val 0x00000000, "DAP Read Memory (32 bit) - Success" - ID 200
+20:10:23:619 (18/03/2026) - WRITE MEM BLOCK Access, AP 0x00000000, Start Addr 0xE0002000, End Addr 0xE000201F, "DAP Write Memory Block - FAILED" - ID 201
+20:10:23:624 (18/03/2026) - WRITE DP  Access, Addr 0x00000004, Val 0x00000000, "DAP Write DP - Success" - ID 202

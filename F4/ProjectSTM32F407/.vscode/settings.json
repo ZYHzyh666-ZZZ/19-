@@ -1,0 +1,20 @@
+{
+    "files.associations": {
+        "sysconfig.h": "c",
+        "drv_pwmout.h": "c",
+        "lx_fc_state.h": "c",
+        "lx_fc_fun.h": "c",
+        "my_control.h": "c",
+        "all_rtos.h": "c",
+        "drv_anoof.h": "c",
+        "my_control_fun.h": "c",
+        "my_fly_fun.h": "c",
+        "ano_dt_lx.h": "c",
+        "drv_key.h": "c",
+        "drv_bsp.h": "c",
+        "my_pid.h": "c",
+        "math.h": "c",
+        "my_camera.h": "c",
+        "my_text.h": "c"
+    }
+}

@@ -1,0 +1,292 @@
+version: "4.1"
+name: ANO_LX_STM32F407
+type: ARM
+deviceName: null
+packDir: null
+srcDirs: []
+virtualFolder:
+  name: <virtual_root>
+  files: []
+  folders:
+    - name: FcSrc
+      files:
+        - path: ../FcSrc/SysConfig.h
+        - path: ../FcSrc/main.c
+        - path: ../FcSrc/ANO_DT_LX.c
+        - path: ../FcSrc/ANO_DT_LX.h
+        - path: ../FcSrc/ANO_LX.c
+        - path: ../FcSrc/ANO_LX.h
+        - path: ../FcSrc/LX_FC_EXT_Sensor.c
+        - path: ../FcSrc/LX_FC_EXT_Sensor.h
+        - path: ../FcSrc/LX_FC_Fun.c
+        - path: ../FcSrc/LX_FC_Fun.h
+        - path: ../FcSrc/LX_FC_State.c
+        - path: ../FcSrc/LX_FC_State.h
+      folders: []
+    - name: DriversBsp
+      files:
+        - path: ../DriversBsp/Drv_BSP.c
+        - path: ../DriversBsp/Drv_BSP.h
+        - path: ../DriversBsp/Ano_Math.c
+        - path: ../DriversBsp/Ano_Math.h
+        - path: ../DriversBsp/Drv_AnoOf.c
+        - path: ../DriversBsp/Drv_AnoOf.h
+      folders: []
+    - name: DriversMcu
+      files:
+        - path: ../DriversMcu/STM32F407/McuConfig.h
+        - path: ../DriversMcu/STM32F407/Drivers/stm32f4xx_it.c
+        - path: ../DriversMcu/STM32F407/Drivers/Drv_Sys.c
+        - path: ../DriversMcu/STM32F407/Drivers/Drv_Sys.h
+        - path: ../DriversMcu/STM32F407/Drivers/Drv_adc.c
+        - path: ../DriversMcu/STM32F407/Drivers/Drv_adc.h
+        - path: ../DriversMcu/STM32F407/Drivers/Drv_led.c
+        - path: ../DriversMcu/STM32F407/Drivers/Drv_led.h
+        - path: ../DriversMcu/STM32F407/Drivers/stm32f4xx_conf.h
+        - path: ../DriversMcu/STM32F407/Drivers/Drv_PwmOut.c
+        - path: ../DriversMcu/STM32F407/Drivers/Drv_PwmOut.h
+        - path: ../DriversMcu/STM32F407/Drivers/Drv_RcIn.c
+        - path: ../DriversMcu/STM32F407/Drivers/Drv_RcIn.h
+        - path: ../DriversMcu/STM32F407/Drivers/Drv_Timer.c
+        - path: ../DriversMcu/STM32F407/Drivers/Drv_Timer.h
+        - path: ../DriversMcu/STM32F407/Drivers/Drv_Uart.c
+        - path: ../DriversMcu/STM32F407/Drivers/Drv_Uart.h
+        - path: ../DriversMcu/STM32F407/Drivers/Drv_flash.c
+        - path: ../DriversMcu/STM32F407/Drivers/Drv_flash.h
+        - path: ../DriversMcu/STM32F407/Drivers/Drv_key.c
+        - path: ../DriversMcu/STM32F407/Drivers/Drv_key.h
+        - path: ../DriversMcu/STM32F407/Drivers/Drv_beep.c
+        - path: ../DriversMcu/STM32F407/Drivers/Drv_beep.h
+        - path: ../DriversMcu/STM32F407/Drivers/Drv_biubiu.c
+        - path: ../DriversMcu/STM32F407/Drivers/Drv_biubiu.h
+        - path: ../DriversMcu/STM32F407/Drivers/Drv_I2C.c
+        - path: ../DriversMcu/STM32F407/Drivers/Drv_I2C.h
+      folders: []
+    - name: LibrariesMcu
+      files:
+        - path: ../DriversMcu/STM32F407/Libraries/CMSIS/ST/STM32F4xx/Source/Templates/arm/startup_stm32f4xx.s
+        - path: ../DriversMcu/STM32F407/Libraries/CMSIS/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
+        - path: ../DriversMcu/STM32F407/Libraries/STM32F4xx_StdPeriph_Driver/src/misc.c
+        - path: ../DriversMcu/STM32F407/Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_adc.c
+        - path: ../DriversMcu/STM32F407/Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.c
+        - path: ../DriversMcu/STM32F407/Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_exti.c
+        - path: ../DriversMcu/STM32F407/Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_flash.c
+        - path: ../DriversMcu/STM32F407/Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_gpio.c
+        - path: ../DriversMcu/STM32F407/Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.c
+        - path: ../DriversMcu/STM32F407/Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_spi.c
+        - path: ../DriversMcu/STM32F407/Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.c
+        - path: ../DriversMcu/STM32F407/Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_usart.c
+      folders: []
+    - name: Doc
+      files:
+        - path: ../Doc/note.txt
+      folders: []
+    - name: FreeRTOS
+      files:
+        - path: ../FreeRTOS/src/croutine.c
+        - path: ../FreeRTOS/src/event_groups.c
+        - path: ../FreeRTOS/src/list.c
+        - path: ../FreeRTOS/src/queue.c
+        - path: ../FreeRTOS/src/stream_buffer.c
+        - path: ../FreeRTOS/src/tasks.c
+        - path: ../FreeRTOS/src/timers.c
+        - path: ../FreeRTOS/port/heap_4.c
+        - path: ../FreeRTOS/port/port.c
+        - path: ../FreeRTOS/FreeRTOSConfig.h
+      folders: []
+    - name: SYS
+      files:
+        - path: ../SYSTEM/sys/sys.c
+        - path: ../SYSTEM/usart/usart.c
+        - path: ../SYSTEM/delay/delay.c
+      folders: []
+    - name: User
+      files:
+        - path: ../User/ALL_RTOS.h
+        - path: ../User/MY_control.c
+        - path: ../User/MY_control.h
+        - path: ../User/MY_PID.c
+        - path: ../User/MY_PID.h
+        - path: ../User/MY_fly_fun.c
+        - path: ../User/MY_fly_fun.h
+        - path: ../User/MY_Gstation.c
+        - path: ../User/MY_Gstation.h
+        - path: ../User/MY_Camera.c
+        - path: ../User/MY_Camera.h
+        - path: ../User/My_task.c
+        - path: ../User/My_task.h
+        - path: ../User/Uart_tiva.c
+        - path: ../User/Uart_tiva.h
+        - path: ../User/MY_fly_state.c
+        - path: ../User/MY_fly_state.h
+        - path: ../User/User_math.c
+        - path: ../User/User_math.h
+        - path: ../User/ALL_include.h
+      folders: []
+    - name: External_sensor
+      files:
+        - path: ../External_sensor/T265.c
+        - path: ../External_sensor/T265.h
+      folders: []
+dependenceList: []
+outDir: build
+miscInfo:
+  uid: ff61eca217eff21e9e2e99e3002358de
+targets:
+  Ano_LX:
+    cppPreprocessAttrs:
+      defineList:
+        - USE_STDPERIPH_DRIVER
+        - USE_USB_OTG_FS
+      incList:
+        - build
+        - ../FcSrc
+        - ../DriversBsp
+        - ../DriversMcu/STM32F407/Drivers
+        - ../DriversMcu/STM32F407/Libraries/STM32F4xx_StdPeriph_Driver/inc
+        - ../DriversMcu/STM32F407/Libraries/CMSIS/Include
+        - ../DriversMcu/STM32F407/Libraries/CMSIS/ST/STM32F4xx/Include
+        - ../DriversMcu/STM32F407
+        - ../SYSTEM/delay
+        - ../SYSTEM/sys
+        - ../SYSTEM/usart
+        - ../User
+        - ../External_sensor
+        - ../FreeRTOS
+        - ../FreeRTOS/ins
+        - ../FreeRTOS/port
+        - ../FreeRTOS/src
+        - .cmsis/include
+        - RTE/_Ano_LX
+      libList: []
+    excludeList: []
+    settings:
+      debugger: cortex-debug
+    toolchain: AC5
+    toolchainConfigMap:
+      AC5:
+        archExtensions: ""
+        cpuType: Cortex-M4
+        floatingPointHardware: single
+        options:
+          version: 4
+          afterBuildTasks:
+            - name: "[Copy linker output for Keil User Commands]"
+              abortAfterFailed: true
+              command: mkdir ${KEIL_OUTPUT_DIR} & copy "${OutDir}\${ProjectName}.axf" "${KEIL_OUTPUT_DIR}\${KEIL_OUTPUT_NAME}.axf"
+              disable: false
+            - name: fromelf.exe --bin -o ./ANO-LX.bin ./build/Ano_LX.axf
+              abortAfterFailed: true
+              command: fromelf.exe --bin -o ./ANO-LX.bin ./build/Ano_LX.axf
+              disable: false
+          asm-compiler: {}
+          beforeBuildTasks: []
+          c/cpp-compiler:
+            CXX_FLAGS: --c99
+            C_FLAGS: --c99
+            c99-mode: true
+            one-elf-section-per-function: true
+            optimization: level-0
+            plain-char-is-signed: true
+            warnings: all-warnings
+          global:
+            output-debug-info: enable
+            use-microLIB: true
+          linker:
+            $outputTaskExcludes:
+              - .bin
+            output-format: elf
+            ro-base: "0x08000000"
+            rw-base: "0x20000000"
+            xo-base: ""
+        scatterFilePath: ""
+        storageLayout:
+          RAM:
+            - id: 1
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: RAM
+            - id: 2
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: RAM
+            - id: 3
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: RAM
+            - id: 1
+              isChecked: true
+              mem:
+                size: "0x20000"
+                startAddr: "0x20000000"
+              noInit: false
+              tag: IRAM
+            - id: 2
+              isChecked: false
+              mem:
+                size: "0x10000"
+                startAddr: "0x10000000"
+              noInit: false
+              tag: IRAM
+          ROM:
+            - id: 1
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: ROM
+            - id: 2
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: ROM
+            - id: 3
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: ROM
+            - id: 1
+              isChecked: true
+              isStartup: true
+              mem:
+                size: "0x100000"
+                startAddr: "0x8000000"
+              tag: IROM
+            - id: 2
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: IROM
+        useCustomScatterFile: false
+    uploadConfigMap:
+      JLink:
+        baseAddr: ""
+        bin: ""
+        cpuInfo:
+          cpuName: STM32F407VG
+          vendor: ST
+        otherCmds: ""
+        proType: 1
+        speed: 8000
+      OpenOCD:
+        baseAddr: "0x08000000"
+        bin: ""
+        interface: cmsis-dap
+        target: stm32f4x
+    uploader: OpenOCD

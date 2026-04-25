@@ -1,0 +1,227 @@
+version: "4.1"
+name: ANO_LX_TM4C123
+type: ARM
+deviceName: null
+packDir: null
+srcDirs: []
+virtualFolder:
+  name: <virtual_root>
+  files: []
+  folders:
+    - name: FcSrc
+      files:
+        - path: ../FcSrc/SysConfig.h
+        - path: ../FcSrc/main.c
+        - path: ../FcSrc/Ano_Scheduler.c
+        - path: ../FcSrc/Ano_Scheduler.h
+        - path: ../FcSrc/User_Task.c
+        - path: ../FcSrc/User_Task.h
+        - path: ../FcSrc/ANO_DT_LX.c
+        - path: ../FcSrc/ANO_DT_LX.h
+        - path: ../FcSrc/ANO_LX.c
+        - path: ../FcSrc/ANO_LX.h
+        - path: ../FcSrc/LX_FC_EXT_Sensor.c
+        - path: ../FcSrc/LX_FC_EXT_Sensor.h
+        - path: ../FcSrc/LX_FC_Fun.c
+        - path: ../FcSrc/LX_FC_Fun.h
+        - path: ../FcSrc/LX_FC_State.c
+        - path: ../FcSrc/LX_FC_State.h
+      folders: []
+    - name: DriversBsp
+      files:
+        - path: ../DriversBsp/Drv_BSP.c
+        - path: ../DriversBsp/Drv_BSP.h
+        - path: ../DriversBsp/Ano_Math.c
+        - path: ../DriversBsp/Ano_Math.h
+        - path: ../DriversBsp/Drv_AnoOf.c
+        - path: ../DriversBsp/Drv_AnoOf.h
+        - path: ../DriversBsp/Drv_UbloxGPS.c
+        - path: ../DriversBsp/Drv_UbloxGPS.h
+      folders: []
+    - name: DriversMcu
+      files:
+        - path: ../DriversMcu/TM4C123/McuConfig.h
+        - path: ../DriversMcu/TM4C123/Drivers/Drv_Sys.c
+        - path: ../DriversMcu/TM4C123/Drivers/Drv_Sys.h
+        - path: ../DriversMcu/TM4C123/Drivers/Drv_Adc.c
+        - path: ../DriversMcu/TM4C123/Drivers/Drv_Adc.h
+        - path: ../DriversMcu/TM4C123/Drivers/Drv_Led.c
+        - path: ../DriversMcu/TM4C123/Drivers/Drv_Led.h
+        - path: ../DriversMcu/TM4C123/Drivers/Drv_PwmOut.c
+        - path: ../DriversMcu/TM4C123/Drivers/Drv_PwmOut.h
+        - path: ../DriversMcu/TM4C123/Drivers/Drv_RcIn.c
+        - path: ../DriversMcu/TM4C123/Drivers/Drv_RcIn.h
+        - path: ../DriversMcu/TM4C123/Drivers/Drv_Uart.c
+        - path: ../DriversMcu/TM4C123/Drivers/Drv_Uart.h
+        - path: ../DriversMcu/TM4C123/Drivers/Drv_Usb.c
+        - path: ../DriversMcu/TM4C123/Drivers/Drv_Usb.h
+        - path: ../DriversMcu/TM4C123/Drivers/Drv_Timer.c
+        - path: ../DriversMcu/TM4C123/Drivers/Drv_Timer.h
+      folders: []
+    - name: LibariesMcu
+      files:
+        - path: ../DriversMcu/TM4C123/Libraries/driverlib.lib
+        - path: ../DriversMcu/TM4C123/Libraries/usblib.lib
+        - path: ../DriversMcu/TM4C123/Libraries/src/startup_TM4C123.s
+        - path: ../DriversMcu/TM4C123/Libraries/src/system_TM4C123.c
+        - path: ../DriversMcu/TM4C123/Libraries/src/usb_serial_structs.c
+        - path: ../DriversMcu/TM4C123/Libraries/inc/usb_serial_structs.h
+      folders: []
+    - name: User
+      files:
+        - path: ../User/MY_F4_uart.c
+        - path: ../User/MY_F4_uart.h
+        - path: ../User/N100.c
+        - path: ../User/N100.h
+        - path: ../User/STP_23L.c
+        - path: ../User/STP_23L.h
+      folders: []
+dependenceList: []
+outDir: build
+miscInfo:
+  uid: feb0f7798c9b7af320333043e79713cf
+targets:
+  Ano_LX:
+    cppPreprocessAttrs:
+      defineList:
+        - TARGET_IS_TM4C123_RB1
+        - PART_TM4C123GH6PM
+      incList:
+        - ../DriversBsp
+        - ../DriversBsp/MyMath
+        - ../DriversMcu/TM4C123/Drivers
+        - ../DriversMcu/TM4C123/Libraries/inc
+        - ../DriversMcu/TM4C123/Libraries/inc/driver_hw
+        - ../DriversMcu/TM4C123/Libraries/inc/driver_inc
+        - ../DriversMcu/TM4C123/Libraries/inc/driver_usb
+        - ../DriversMcu/TM4C123/Libraries/inc/driver_usb/device
+        - ../FcSrc
+        - ../FcSrc/FcGeneral
+        - ../FcSrc/FcSpecific
+        - ../DriversMcu/TM4C123
+        - ../User
+        - .cmsis/include
+        - RTE/_Ano_LX
+      libList: []
+    excludeList: []
+    toolchain: AC5
+    toolchainConfigMap:
+      AC5:
+        archExtensions: ""
+        cpuType: Cortex-M4
+        floatingPointHardware: single
+        options:
+          version: 4
+          afterBuildTasks: []
+          asm-compiler: {}
+          beforeBuildTasks: []
+          c/cpp-compiler:
+            CXX_FLAGS: --diag_suppress=1 --diag_suppress=1295
+            C_FLAGS: --diag_suppress=1 --diag_suppress=1295
+            c99-mode: true
+            one-elf-section-per-function: true
+            optimization: level-0
+            warnings: all-warnings
+          global:
+            output-debug-info: enable
+            use-microLIB: true
+          linker:
+            $disableOutputTask: true
+            $outputTaskExcludes:
+              - .bin
+            misc-controls: --entry Reset_Handler
+            output-format: elf
+            ro-base: "0x00000000"
+            rw-base: "0x20000000"
+            xo-base: ""
+        scatterFilePath: ""
+        storageLayout:
+          RAM:
+            - id: 1
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: RAM
+            - id: 2
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: RAM
+            - id: 3
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: RAM
+            - id: 1
+              isChecked: true
+              mem:
+                size: "0x8000"
+                startAddr: "0x20000000"
+              noInit: false
+              tag: IRAM
+            - id: 2
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: IRAM
+          ROM:
+            - id: 1
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: ROM
+            - id: 2
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: ROM
+            - id: 3
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: ROM
+            - id: 1
+              isChecked: true
+              isStartup: true
+              mem:
+                size: "0x40000"
+                startAddr: "0x0"
+              tag: IROM
+            - id: 2
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: IROM
+        useCustomScatterFile: true
+    uploadConfigMap:
+      JLink:
+        baseAddr: ""
+        bin: ""
+        cpuInfo:
+          cpuName: "null"
+          vendor: "null"
+        otherCmds: ""
+        proType: 1
+        speed: 8000
+      OpenOCD:
+        baseAddr: "0x08000000"
+        bin: ""
+        interface: cmsis-dap
+        target: ti_msp432
+    uploader: OpenOCD
