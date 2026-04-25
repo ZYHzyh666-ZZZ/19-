@@ -199,43 +199,42 @@ void mission_1_2(void)//找目标
 		takeoff_once = 1;
 	}
 
-	postion_target_z = PID1_updata(location[0]);
+	postion_target_z = Default_height + PID1_updata(location[0]);
 
 	Set_High(postion_target_z);
 	mode_Hold_Yaw(Yaw_target);				//保持航向角稳定
 	Program_Ctrl_User_Set_HXYcmps(0,0);
 	
-	if(_time_ok(task_1))
+	if(_time_ok(task_1) && abs(location[0]) < 10)
 	{
 		task_1.finish = 1;
 		takeoff_once = 0;
-		ANO_DT_SendString(2,"move_1 OK!");
+		ANO_DT_SendString(2,"find OK!");
 		Move_stop();
 		return;
 	}
 }
 
-float agle_first = 0;
-float agle_line = 0;
-u8 agle_flag = 0;		//首点顺逆时针标志位
-
 void mission_1_3(void)//绕红杆
 {
 	if(takeoff_once == 0)
 	{
-		postion_target_z = 0;
+		// postion_target_z = Default_height;
 		takeoff_once = 1;
 	}
 
-	Set_High(0);
-	mode_Hold_Yaw(Yaw_target);				//保持航向角稳定
+	postion_target_z = Default_height + PID1_updata(location[0]);
 
-	if(ano_of.of_alt_cm < 25 && _time_ok(task_1))
+	Set_High(postion_target_z);
+	mode_Hold_Yaw(Yaw_target);				//保持航向角稳定
+	Program_Ctrl_User_Set_HXYcmps(0,0);
+	
+	if(_time_ok(task_1) && 0)
 	{
 		task_1.finish = 1;
 		takeoff_once = 0;
-		FC_Lock();
-		ANO_DT_SendString(2,"land_OK!");
+		ANO_DT_SendString(2,"move_1 OK!");
+		Move_stop();
 		return;
 	}
 }
@@ -253,9 +252,7 @@ void mission_1_4(void)//转到中间位置
 
 	Set_High(postion_target_z);
 
-	ANO_DT_Send_MY_DATA(0xF4,2,(int)(agle_first),(int)(change_angle_range(agle_line + 180.0f)));
-
-	if(_time_ok(task_1) && abs(Angle_calculation(change_angle_range(agle_line + 180.0f), MY_fly.body.yaw)) < 7.0f)
+	if(_time_ok(task_1))
 	{
 		task_1.finish = 1;
 		takeoff_once = 0;
@@ -277,8 +274,6 @@ void mission_1_5(void)//自转
 
 	Set_High(postion_target_z);
 	Program_Ctrl_User_Set_YAWdps(-20);				//保持航向角稳定
-
-	ANO_DT_Send_MY_DATA(0xF1,2,(int)(abs(agle_first - MY_fly.body.yaw)*100),(int)(change_angle_range(agle_line + 180.0f)*100));
 
 
 	if(_time_ok(task_1))
@@ -318,14 +313,12 @@ void mission_1_7(void)//绕另一根杆
 		postion_target_z = Default_height;
 		takeoff_once = 1;
 
-		agle_first = MY_fly.body.yaw;
 	}
 
 	Set_High(postion_target_z);
 
-	ANO_DT_Send_MY_DATA(0xF1,2,(int)((agle_first - MY_fly.body.yaw)*100),(int)(MY_fly.body.yaw*100));
 
-	if(_time_ok(task_1) && abs(Angle_calculation(agle_first, MY_fly.body.yaw)) < 5.0f)
+	if(_time_ok(task_1))
 	{
 		task_1.finish = 1;
 		takeoff_once = 0;
@@ -413,14 +406,12 @@ void mission_2_3(void)//转
 		postion_target_z = Default_height;
 		takeoff_once = 1;
 
-		agle_first = MY_fly.body.yaw;
 	}
 
 	Set_High(postion_target_z);
 
-	ANO_DT_Send_MY_DATA(0xF4,2,(int)(abs(Angle_calculation(agle_first,MY_fly.body.yaw))),(int)(change_angle_range(agle_line + 180.0f)*100));
 
-	if(_time_ok(task_2) && abs(Angle_calculation(agle_first, MY_fly.body.yaw)) < 5.0f && agle_line != 0)
+	if(_time_ok(task_2))
 	{
 		task_2.finish = 1;
 		takeoff_once = 0;
@@ -439,9 +430,8 @@ void mission_2_4(void)//转到中间位置
 
 	Set_High(postion_target_z);
 
-	ANO_DT_Send_MY_DATA(0xF4,2,(int)(Angle_calculation(change_angle_range(agle_line + 180.0f), MY_fly.body.yaw)),(int)(agle_line*100));
 
-	if(_time_ok(task_2) && abs(Angle_calculation(change_angle_range(agle_line + 180.0f), MY_fly.body.yaw)) < 10.0f)
+	if(_time_ok(task_2))
 	{
 		task_2.finish = 1;
 		takeoff_once = 0;
