@@ -6,7 +6,7 @@
 _PID_parameter	PID_HIGH;
 _PID_parameter	PID_YAW;
 
-_PID_parameter  PID_1;
+_PID_parameter  PID_1;//高度PID
 _PID_parameter  PID_2;
 _PID_parameter  PID_3;
 
@@ -172,7 +172,7 @@ void MY_PID_Init(void)
     _PID_Init(&PID_YAW, 0.008f, 0.0f, 0.001f, 22.0f, -22.0f);
 	
   /*视觉定位旋转PID参数初始化*/
-    _PID_Init(&PID_1, 0.1f, 0.0f, 0.01f, 22.0f, -22.0f);
+    _PID_Init(&PID_1, 0.1f, 0.0f, 0.01f, 40.0f, -40.0f);
     _PID_Init(&PID_2, 0.6f, 0.0f, 0.1f, 22.0f, -22.0f);
 
   /*闭环旋转PID参数初始化*/  
@@ -253,25 +253,9 @@ int PID_calculate_user_high(float exp)//高度PID计算
   * 更新日期：   2025-11-29
   *             2025-12-7 重构,使用底层传统PID计算函数
   */
-int PID_calculate_Circular(float exp)
+int PID1_updata(float exp)
 {
-  /*方向最优转化*/
-	if((N100.Yaw > exp))	
-	{
-		if(N100.Yaw - exp < 18000)	//逆时针 负
-			PID_1.err_current = exp - ((double)N100.Yaw);
-		else							//顺时针 正
-			PID_1.err_current = 36000 - ((double)N100.Yaw) + exp;
-	}
-	else
-	{
-		if(exp - N100.Yaw < 18000)	//顺时针	 正
-			PID_1.err_current = exp - ((double)N100.Yaw);
-		else							//逆时针	 负
-			PID_1.err_current = -(((double)N100.Yaw) + 36000 - exp);
-	}
-
-  return _PID_Traditional_computing(PID_1, PID_1.err_current);
+  return _PID_Increment_computing(PID_1, exp);//增量式PID
 }
 
 /**

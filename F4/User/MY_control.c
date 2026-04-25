@@ -199,6 +199,8 @@ void mission_1_2(void)//找目标
 		takeoff_once = 1;
 	}
 
+	postion_target_z = PID1_updata(location[0]);
+
 	Set_High(postion_target_z);
 	mode_Hold_Yaw(Yaw_target);				//保持航向角稳定
 	Program_Ctrl_User_Set_HXYcmps(0,0);

@@ -12,7 +12,8 @@
 #define Y_POSITION 240 
 #define Z_POSITION 0
 
-#define Location_baseline 240
+#define Location_0_baseline 240
+#define Location_1_baseline 320
 
 char camera_data[20] = {0};
 u8 camera_flag = 0, len = 0, count_data = 0;
@@ -29,6 +30,7 @@ void Camera_Data(void) //处理接收的数据
 		{
 			width[0] = camera_data[1]*100 + camera_data[2]*10 + camera_data[3];
 			location[0] = camera_data[4]*100 + camera_data[5]*10 + camera_data[6];
+            location[0] = location[0] - Location_0_baseline;
 			rx_flag[0] = 1;
 			
 			break;
@@ -84,7 +86,6 @@ void Camera_Receive_Data(uint8_t data)
         count_data = 0;
         state = 2;
         // ANO_DT_Send_MY_DATA(0xF2,1,data);
-
     }
 
     else if (state == 2)                //数据内容

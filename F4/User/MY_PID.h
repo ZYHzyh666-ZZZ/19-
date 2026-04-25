@@ -39,24 +39,9 @@ void MY_PID_Init(void);						//PID参数初始化
 
 int PID_calculate_user_high(float exp);		//高度PID
 
-//int PID_calculate_Hold_Yaw(float exp);		//t265 航向角PID
-//int PID_calculate_t265_x(float exp);		//t265 x轴PID
-//int PID_calculate_t265_y(float exp);		//t265 y轴PID
-
-//int PID_calculate_attack_x(float exp);		//打击目标x轴PID
-//int PID_calculate_attack_y(float exp);		//打击目标y轴PID
-//int PID_calculate_attack_z(float exp);		//打击目标z轴PID
-
 int PID_N100_Hold_Yaw(float exp);//N100航向角PID计算
-int PID_calculate_Line_Y(float exp);
-int PID_calculate_Line_X(float exp);
-
-int PID_calculate_DONE_X(float exp);
-int PID_calculate_DONE_Y(float exp);
-
-int PID_calculate_Circular(float exp);
 
 
-int PID_calculate_Radius(float exp);
-int PID_calculate_Yaw_speed(float exp);
+int PID1_updata(float exp);
+
 #endif

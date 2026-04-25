@@ -105,20 +105,20 @@ void mode_Hold_Yaw(s16 exp_yaw)
   * 备注：      无
   * 更新日期：   2026-1-13
   */
-void Circular_rotation(s16 r, s16 v)
-{
-    s16 Target_Yaw_speed;
-    /*计算航向角速度*/
-    Target_Yaw_speed = (v*360)/(2*PI*r)*10;  //cm/s转为deg/s
+// void Circular_rotation(s16 r, s16 v)
+// {
+//     s16 Target_Yaw_speed;
+//     /*计算航向角速度*/
+//     Target_Yaw_speed = (v*360)/(2*PI*r)*10;  //cm/s转为deg/s
 
-    Target_Yaw_speed = (Target_Yaw_speed-5)/10; //四舍五入
-    /*速度上传*/
-    Program_Ctrl_User_Set_HXYcmps(0,v);
-    Program_Ctrl_User_Set_YAWdps(Target_Yaw_speed);
+//     Target_Yaw_speed = (Target_Yaw_speed-5)/10; //四舍五入
+//     /*速度上传*/
+//     Program_Ctrl_User_Set_HXYcmps(0,v);
+//     Program_Ctrl_User_Set_YAWdps(Target_Yaw_speed);
 
 
-//	ANO_DT_Send_MY_DATA_3();
-}
+// //	ANO_DT_Send_MY_DATA_3();
+// }
 
 
 /**
@@ -133,22 +133,22 @@ void Circular_rotation(s16 r, s16 v)
   *             速度直接传出，角度进入PID计算
   * 更新日期：   2026-1-13
   */
-void Reach_Circular(s16 Radius, s16 Speed, float time, float angle)
-{
-    float angle_100 = 0;
-    int Target_Yaw_speed;
+// void Reach_Circular(s16 Radius, s16 Speed, float time, float angle)
+// {
+//     float angle_100 = 0;
+//     int Target_Yaw_speed;
 
-    angle_100 = (Speed*time*360)/(2*PI*Radius) * 100; //计算出旋转角度
-    angle_100 = ((int)(angle*100 + angle_100 + 18000))%36000 - 18000; //转换为N100航向角格式
+//     angle_100 = (Speed*time*360)/(2*PI*Radius) * 100; //计算出旋转角度
+//     angle_100 = ((int)(angle*100 + angle_100 + 18000))%36000 - 18000; //转换为N100航向角格式
 
-    Target_Yaw_speed = PID_calculate_Circular(angle_100);
+//     Target_Yaw_speed = PID_calculate_Circular(angle_100);
 
-    ANO_DT_Send_MY_DATA(0xF1,2,(int)angle_100,(int)(angle_100 - N100.Yaw));
-    // /*速度上传*/
-    Program_Ctrl_User_Set_HXYcmps(0,Speed);
-	Program_Ctrl_User_Set_YAWdps(Target_Yaw_speed);
+//     ANO_DT_Send_MY_DATA(0xF1,2,(int)angle_100,(int)(angle_100 - N100.Yaw));
+//     // /*速度上传*/
+//     Program_Ctrl_User_Set_HXYcmps(0,Speed);
+// 	Program_Ctrl_User_Set_YAWdps(Target_Yaw_speed);
 
-}
+// }
 
 /**
   * 函数作用：  距离锁定
@@ -158,15 +158,15 @@ void Reach_Circular(s16 Radius, s16 Speed, float time, float angle)
   * 备注：      无
   * 更新日期：   2026-1-13
   */
-void Circular_Radius(s16 r_error, int v_y)
-{
-    int V_x;
-    V_x = PID_calculate_Radius(r_error);
-    /*速度上传*/
-    Program_Ctrl_User_Set_HXYcmps(V_x,v_y);
-    // ANO_DT_Send_MY_DATA(0xF1,1,V_x);
-//	ANO_DT_Send_MY_DATA_3();
-}
+// void Circular_Radius(s16 r_error, int v_y)
+// {
+//     int V_x;
+//     V_x = PID_calculate_Radius(r_error);
+//     /*速度上传*/
+//     Program_Ctrl_User_Set_HXYcmps(V_x,v_y);
+//     // ANO_DT_Send_MY_DATA(0xF1,1,V_x);
+// //	ANO_DT_Send_MY_DATA_3();
+// }
 
 /**
   * 函数作用：  自转角度锁定
@@ -177,18 +177,18 @@ void Circular_Radius(s16 r_error, int v_y)
   * 更新日期：   2026-1-13
   *             2026-1-17
   */
-void Circular_center(s16 r_error)
-{
-    int angle_speed;
+// void Circular_center(s16 r_error)
+// {
+//     int angle_speed;
 
-    angle_speed = MY_fly.body.Velocity_y * 360 / 70 / 2 / PI;
+//     angle_speed = MY_fly.body.Velocity_y * 360 / 70 / 2 / PI;
 
-    angle_speed += PID_calculate_Yaw_speed(r_error);
-    /*速度上传*/
-    Program_Ctrl_User_Set_YAWdps(angle_speed);
-    // ANO_DT_Send_MY_DATA(0xF1,1,V_yaw);
-//	ANO_DT_Send_MY_DATA_3();
-}
+//     angle_speed += PID_calculate_Yaw_speed(r_error);
+//     /*速度上传*/
+//     Program_Ctrl_User_Set_YAWdps(angle_speed);
+//     // ANO_DT_Send_MY_DATA(0xF1,1,V_yaw);
+// //	ANO_DT_Send_MY_DATA_3();
+// }
 
 #if 0
 
