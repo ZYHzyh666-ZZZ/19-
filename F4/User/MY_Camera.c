@@ -5,12 +5,12 @@
 #define Z_POSITION 0
 
 #define Width_0_baseline 12
-#define Width_1_baseline 12
+#define Width_1_baseline 26
 #define Location_0_baseline 240
 #define Location_1_baseline 320
 
 char camera_data[20] = {0};
-u8 camera_flag = 0, len = 0, count_data = 0;
+u8 camera_flag[2] = {0}, len = 0, count_data = 0;
 
 s16 width[2] = {0};
 s16 location[2] = {0};
@@ -28,7 +28,7 @@ void Camera_Data(void) //处理接收的数据
             location[0] = Location_0_baseline - location[0];
 
 			rx_flag[0] = 1;
-            camera_flag = 1;
+            camera_flag[0] = 1;
 			break;
 		}
 		case 0x0B:
@@ -39,7 +39,7 @@ void Camera_Data(void) //处理接收的数据
             location[1] = Location_1_baseline - location[1];
 
 			rx_flag[1] = 1;
-			camera_flag = 1;
+            camera_flag[1] = 1;
 			break;
 		}
 		case 0x0C:

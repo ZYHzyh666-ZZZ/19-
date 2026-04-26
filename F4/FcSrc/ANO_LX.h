@@ -146,5 +146,9 @@ void Onekey_lock(void);
 //public
 void ANO_LX_Task(void);
 
+void RC_Data_Task(float dT_s);
+
+void ESC_Output(u8 unlocked);
+
 #endif
 

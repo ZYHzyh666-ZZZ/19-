@@ -78,7 +78,7 @@ u8 mod_2_yaw = 0;
 u8 mod_flag = 0;
 
 //遥控器数据处理
-static inline void RC_Data_Task(float dT_s)
+void RC_Data_Task(float dT_s)
 {
 	static u8 fail_safe_change_mod, fail_safe_return_home;
 	static u8 mod_f[3];				//mod_f[0]当前模式，mod_f[1]上次模式，mod_f[2]程控模式切换次数
@@ -239,7 +239,7 @@ static inline void RC_Data_Task(float dT_s)
 }
 
 //输出给电调
-static inline void ESC_Output(u8 unlocked)
+void ESC_Output(u8 unlocked)
 {
 	static u8 esc_calibrated;
 	static s16 pwm[8];
@@ -322,14 +322,14 @@ void ANO_LX_Task()
 	tmp_cnt[0] %= 10;
 	if (tmp_cnt[0] == 0)
 	{
-		//遥控输入
-		DrvRcInputTask(0.01f);
-		//遥控数据处理
-		RC_Data_Task(0.01f);
+		// //遥控输入
+		// DrvRcInputTask(0.01f);
+		// //遥控数据处理
+		// RC_Data_Task(0.01f);
 		//飞控状态处理
-		LX_FC_State_Task(0.01f); 
+		// LX_FC_State_Task(0.01f);
 		//匿名光流状态检测
-		AnoOF_Check_State(0.01f);
+		// AnoOF_Check_State(0.01f);
 		//计100ms
 		// tmp_cnt[1]++;
 		// tmp_cnt[1] %= 10;
@@ -343,12 +343,12 @@ void ANO_LX_Task()
 //	//解析串口接收到的数据
 //	DrvUartDataCheck();
 	//外部传感器数据处理（光流/T256）
-	LX_FC_EXT_Sensor_Task(0.001f);
+	// LX_FC_EXT_Sensor_Task(0.001f);
 	//通信交换
-	ANO_LX_Data_Exchange_Task(0.001f);
+	// ANO_LX_Data_Exchange_Task(0.001f);
 	//电调输出
-	ESC_Output(1); //unlocked
+	// ESC_Output(1); //unlocked
 	//灯光驱动
-	LED_1ms_DRV();
+	// LED_1ms_DRV();
 }
 

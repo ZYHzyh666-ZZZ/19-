@@ -155,14 +155,14 @@ void mission_1_1(void)//起飞
 		postion_target_z = Default_height;
 		takeoff_once = 1;
 		Yaw_target = N100.Yaw;
-		camera_flag = 0;
+		camera_flag[0] = 0;
 		ANO_DT_SendString(1,"mod1_begin");
 	}
 	Set_High(postion_target_z);
 	mode_Hold_Yaw(Yaw_target);				//保持航向角稳定
 
 	// if(ano_of.of_alt_cm > Default_height-3 && _time_ok(task_1))//起飞到150cm
-	if(camera_flag && _time_ok(task_1))//起飞到150cm
+	if(camera_flag[0] && _time_ok(task_1))//起飞到150cm
 	{
 		task_1.finish = 1;
 		takeoff_once = 0;
@@ -191,7 +191,7 @@ void mission_1_2(void)//定目标
 	Set_High(postion_target_z);
 	Program_Ctrl_User_Set_HXYcmps(velocity_target_x,0);
 	
-	if(_time_ok(task_1) && abs(location[0]) < 7 && abs(width[0]) < 2 && 0)
+	if(_time_ok(task_1) && abs(location[0]) < 7 && abs(width[0]) < 2)
 	{
 		task_1.finish = 1;
 		takeoff_once = 0;
@@ -205,22 +205,24 @@ void mission_1_3(void)//巡线
 	if(takeoff_once == 0)
 	{
 		// postion_target_z = Default_height;
-		camera_flag = 0;
+		camera_flag[1] = 0;
 		takeoff_once = 1;
+		
 	}
 
 	mode_Hold_Yaw(Yaw_target);				//保持航向角稳定
-	Set_High(postion_target_z);
 	Program_Ctrl_User_Set_HXYcmps(velocity_target_x,-10);
+	Set_High(postion_target_z);
 
-	if(task_1.mission_times < 3.0f)//巡线3s内
-		camera_flag = 0;
-	if(_time_ok(task_1) && camera_flag)
+	if(task_1.mission_times < 2.0f)//巡线3s内
+		camera_flag[1] = 0;
+	if(_time_ok(task_1) && camera_flag[1])
 	{
 		task_1.finish = 1;
 		PID1_flag = 0;
+		Move_stop();
 		takeoff_once = 0;
-		ANO_DT_SendString(2,"find OK!");
+		ANO_DT_SendString(2,"go OK!");
 		return;
 	}
 }
@@ -236,11 +238,12 @@ void mission_1_4(void)//旋转
 	// postion_target_z =  MY_fly.C_system.z + PID1_updata(location[0]);
 
 	Set_High(postion_target_z);
-	Program_Ctrl_User_Set_YAWdps(-10);//旋转速度
-	// mode_Hold_Yaw(Yaw_target);				//保持航向角稳定
+	// Program_Ctrl_User_Set_YAWdps(-5);//旋转速度
+	mode_Hold_Yaw(Yaw_target);				//保持航向角稳定
 	Program_Ctrl_User_Set_HXYcmps(velocity_target_x,velocity_target_y);
+		// Program_Ctrl_User_Set_HXYcmps(velocity_target_x,0);
 	
-	if(_time_ok(task_1) && abs(Angle_calculation(Yaw_target/100.f,MY_fly.body.yaw)) > 170)
+	if(_time_ok(task_1) && abs(Angle_calculation(Yaw_target/100.f,MY_fly.body.yaw)) > 90)
 	{
 		task_1.finish = 1;
 		PID2_flag = 0;
@@ -255,27 +258,48 @@ void mission_1_5(void)//巡线
 {
 	if(takeoff_once == 0)
 	{
-		// postion_target_z = Default_height;
-		Yaw_target = change_angle_range(Yaw_target + 18000);
-		camera_flag = 0;
-		PID1_flag = 1;
+		postion_target_z = 0;
+		MY_HMI.TARGET_position.Z = postion_target_z;
+		Move_stop();
+		begin_land = 1;		
 		takeoff_once = 1;
 	}
 
-	mode_Hold_Yaw(Yaw_target);				//保持航向角稳定
 	Set_High(postion_target_z);
-	Program_Ctrl_User_Set_HXYcmps(velocity_target_x,-10);
-
-	if(task_1.mission_times < 3.0f)//巡线3s内
-		camera_flag = 0;
-	if(_time_ok(task_1) && camera_flag)
+	if(ano_of.of_alt_cm < 25 && _time_ok(task_1))
 	{
 		task_1.finish = 1;
-		PID1_flag = 0;
 		takeoff_once = 0;
-		ANO_DT_SendString(2,"find OK!");
+		FC_Lock();
+		ANO_DT_SendString(2,"land_OK!");
 		return;
 	}
+
+
+
+	// if(takeoff_once == 0)
+	// {
+	// 	// postion_target_z = Default_height;
+	// 	Yaw_target = change_angle_range(Yaw_target + 18000);
+	// 	camera_flag[1] = 0;
+	// 	PID1_flag = 1;
+	// 	takeoff_once = 1;
+	// }
+
+	// mode_Hold_Yaw(Yaw_target);				//保持航向角稳定
+	// Set_High(postion_target_z);
+	// Program_Ctrl_User_Set_HXYcmps(velocity_target_x,-10);
+
+	// if(task_1.mission_times < 3.0f)//巡线3s内
+	// 	camera_flag[1] = 0;
+	// if(_time_ok(task_1) && camera_flag[1])
+	// {
+	// 	task_1.finish = 1;
+	// 	PID1_flag = 0;
+	// 	takeoff_once = 0;
+	// 	ANO_DT_SendString(2,"find OK!");
+	// 	return;
+	// }
 }
 
 void mission_1_6(void)//降落

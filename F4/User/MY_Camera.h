@@ -3,7 +3,7 @@
 
 #include "SysConfig.h"
 
-extern u8 camera_flag;
+extern u8 camera_flag[2];
 
 extern s16 width[2];
 extern s16 location[2];

@@ -171,7 +171,7 @@ void MY_PID_Init(void)
   /*PID参数初始化*/
     _PID_Init(&PID_1, 0.1f, 0.0f, 0.01f, 20.0f, -20.0f);  //高度环
     _PID_Init(&PID_2, 0.8f, 0.0f, 0.01f, 10.0f, -10.0f);   //距离环
-    _PID_Init(&PID_3, 0.008f, 0.0f, 0.001f, 22.0f, -22.0f);
+    _PID_Init(&PID_3, 0.2f, 0.0f, 0.01f, 15.0f, -15.0f);    //旋转环
 }
 
 
@@ -254,7 +254,7 @@ int PID1_updata(float exp)
   if(exp > -7 && exp < 7)
     e_exp = 0;
   else
-    e_exp = exp * 1.4f;
+    e_exp = exp * 1.7f;
 
   return _PID_Traditional_computing(PID_1, e_exp);//增量式PID
 }

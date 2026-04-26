@@ -30,5 +30,6 @@ void DrvRcInputInit(void);
 void DrvPpmGetOneCh(u16 data);
 void DrvSbusGetOneByte(u8 data);
 void DrvRcInputTask(float dT_s);
+void rcSignalCheck(float *dT_s);
 
 #endif

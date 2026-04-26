@@ -187,7 +187,7 @@ bit0 = n/a
 		}
 	}
 }
-static void rcSignalCheck(float *dT_s)
+void rcSignalCheck(float *dT_s)
 {
 	//
 	static u8 cnt_tmp;

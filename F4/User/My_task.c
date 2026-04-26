@@ -39,6 +39,18 @@ void USART_task(void *pvParameters);
 TaskHandle_t BAT_Handler;             	//电池电压检测
 void BAT_task(void *pvParameters);
 
+TaskHandle_t ANO_Exchange_Handler;             	//外部传感器数据处理任务
+void ANO_Exchange_task(void *pvParameters);
+
+TaskHandle_t FC_State_Handler;             	//飞控状态更新任务
+void FC_State_task(void *pvParameters);
+
+TaskHandle_t RC_Handler;             	//遥控数据处理任务
+void RC_task(void *pvParameters);
+
+TaskHandle_t ESC_Out_Handler;             	//电调输出任务
+void ESC_Out_task(void *pvParameters);
+
 /*---------------------------------*/
 u32 times;
 double Work_time = 0;
@@ -116,51 +128,38 @@ void ANO_task(void *pvParameters)//
                 (void*          )NULL,                  
                 (UBaseType_t    )BAT_TASK_PRIO,        
                 (TaskHandle_t*  )&BAT_Handler); 
+    //创建外部传感器数据处理任务
+    xTaskCreate((TaskFunction_t )ANO_Exchange_task,             
+                (const char*    )"ANO_Exchange_task",           
+                (uint16_t       )ANO_Exchange_STK_SIZE,        
+                (void*          )NULL,                  
+                (UBaseType_t    )ANO_Exchange_TASK_PRIO,        
+                (TaskHandle_t*  )&ANO_Exchange_Handler); 
+    //创建飞控状态更新任务
+    xTaskCreate((TaskFunction_t )FC_State_task,             
+                (const char*    )"FC_State_task",           
+                (uint16_t       )FC_State_STK_SIZE,        
+                (void*          )NULL,                  
+                (UBaseType_t    )FC_State_TASK_PRIO,        
+                (TaskHandle_t*  )&FC_State_Handler); 
+    //创建遥控数据处理任务
+    xTaskCreate((TaskFunction_t )RC_task,             
+                (const char*    )"RC_task",           
+                (uint16_t       )RC_STK_SIZE,        
+                (void*          )NULL,                  
+                (UBaseType_t    )RC_TASK_PRIO,        
+                (TaskHandle_t*  )&RC_Handler); 
+    //创建电调输出任务
+    xTaskCreate((TaskFunction_t )ESC_Out_task,             
+                (const char*    )"ESC_Out_task",           
+                (uint16_t       )ESC_Out_STK_SIZE,        
+                (void*          )NULL,                  
+                (UBaseType_t    )ESC_Out_TASK_PRIO,        
+                (TaskHandle_t*  )&ESC_Out_Handler); 
 
     vTaskDelete(ANO_Handler); //删除开始任务
     taskEXIT_CRITICAL();            //退出临界区
 }
-
-/**
-  * 函数作用：  USART更新回调函数
-  * 参数1：     参数句柄
-  * 返回值：    无
-  * 
-  * 备注：      解析串口数据任务，优先级 15
-  * 更新日期：   2026-1-22
-  */
-void USART_task(void *pvParameters)
-{	
-	while(1)
-    {		
-		drvU1DataCheck();
-		drvU2DataCheck();
-		// drvU3DataCheck();//sbus
-		drvU4DataCheck();
-		drvU5DataCheck();
-		drvU6DataCheck();
-        vTaskDelay(1);
-    }
-}
-
-/**
-  * 函数作用：  电池电压检测函数
-  * 参数1：     参数句柄
-  * 返回值：    无
-  * 
-  * 备注：      读取电池电压数据任务，优先级 15
-  * 更新日期：   2026-4-26
-  */
-void BAT_task(void *pvParameters)
-{	
-    uint16_t Bat_data;
-	while(1)
-    {		
-		INA226_Read(&Bat_data);
-        vTaskDelay(100);
-    }
-}
-
 
 /**
   * 函数作用：  基础外设调用回调函数
@@ -200,6 +199,132 @@ void Systeam_task(void *pvParameters)
     while(1)
     {
 
+    }
+}
+
+/**
+  * 函数作用：  USART更新回调函数
+  * 参数1：     参数句柄
+  * 返回值：    无
+  * 
+  * 备注：      解析串口数据任务，优先级 15
+  * 更新日期：   2026-1-22
+  */
+void USART_task(void *pvParameters)
+{	
+	while(1)
+    {		
+        //发送数据
+        ANO_LX_Data_Exchange_Task(0.001f);
+
+        //接收数据
+		drvU1DataCheck();
+		drvU2DataCheck();
+		// drvU3DataCheck();//sbus
+		drvU4DataCheck();
+		drvU5DataCheck();
+		drvU6DataCheck();
+        vTaskDelay(1);
+    }
+}
+
+/**
+  * 函数作用：  电池电压检测函数
+  * 参数1：     参数句柄
+  * 返回值：    无
+  * 
+  * 备注：      读取电池电压数据任务，优先级 15
+  * 更新日期：   2026-4-26
+  */
+void BAT_task(void *pvParameters)
+{	
+    uint16_t Bat_data;
+	while(1)
+    {		
+		INA226_Read(&Bat_data);
+        vTaskDelay(100);
+    }
+}
+
+/**
+  * 函数作用：  飞控状态更新函数
+  * 参数1：     参数句柄
+  * 返回值：    无
+  * 
+  * 备注：      更新飞控状态数据任务，优先级 15
+  * 更新日期：   2026-4-26
+  */
+void FC_State_task(void *pvParameters)
+{	
+	while(1)
+    {		
+		LX_FC_State_Task(0.01f);
+        vTaskDelay(10);
+    }
+}
+
+/**
+  * 函数作用：  遥控器数据更新函数
+  * 参数1：     参数句柄
+  * 返回值：    无
+  * 
+  * 备注：      更新遥控器数据任务，优先级 15
+  * 更新日期：   2026-4-26
+  */
+void RC_task(void *pvParameters)
+{	
+	while(1)
+    {		
+		//遥控输入
+		DrvRcInputTask(0.01f);
+		//遥控数据处理
+		RC_Data_Task(0.01f);
+
+        vTaskDelay(10);
+    }
+}
+
+/**
+  * 函数作用：  电调输出函数
+  * 参数1：     参数句柄
+  * 返回值：    无
+  * 
+  * 备注：      更新电调输出任务，优先级 16
+  * 更新日期：   2026-4-26
+  */
+void ESC_Out_task(void *pvParameters)
+{	
+	while(1)
+    {		
+	    ESC_Output(1); //unlocked
+        
+        vTaskDelay(1);
+    }
+}
+
+/**
+  * 函数作用：  外部传感器数据处理函数
+  * 参数1：     参数句柄
+  * 返回值：    无
+  * 
+  * 备注：      处理外部传感器数据任务，优先级 10
+  * 更新日期：   2026-4-26
+  */
+void ANO_Exchange_task(void *pvParameters)
+{	
+    u8 times_count = 0;
+	while(1)
+    {		
+        if(times_count++ == 10)
+        {
+            AnoOF_Check_State(0.01f);
+
+            times_count = 0;
+        }
+        LX_FC_EXT_Sensor_Task(0.001f);
+
+        LED_1ms_DRV();                          //凌霄LED同步
+        vTaskDelay(1);
     }
 }
 
