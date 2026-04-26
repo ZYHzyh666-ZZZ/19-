@@ -56,8 +56,8 @@ u32 times;
 double Work_time = 0;
 
 u16 User_times_count; //
-s16 postion_target_x; 
-s16 postion_target_y;
+s16 postion_target_x, velocity_target_x; 
+s16 postion_target_y, velocity_target_y;
 s16 postion_target_z;
 /*---------------------------------*/
 
@@ -249,13 +249,12 @@ void user_200Hz(TimerHandle_t xTimer)
         // Printf_uart5("Uart5\n");
         // Printf_uart6("Uart6\n");
 
-        HMI_Data_Print();
+        // HMI_Data_Print();
     }
 
     location_out = MY_fly.C_system.z + PID1_updata(location[0]);
-    width_out = PID2_updata(width[0]);
+    width_out = PID2_updata(width[0]);;
 
     ANO_DT_Send_MY_DATA(0xF8,2,location_out,width_out);
-
 }
 

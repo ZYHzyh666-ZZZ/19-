@@ -166,14 +166,14 @@ int limit_pidout(float pid_k, float pidout, float max, float min)
 void MY_PID_Init(void)
 {
   /*定高PID参数初始化*/
-    _PID_Init(&PID_HIGH, 0.55f, 0.0f, 0.2f, 40.0f, -40.0f);
+    _PID_Init(&PID_HIGH, 0.50f, 0.0f, 0.2f, 40.0f, -40.0f);
 
   /*航向角PID参数初始化*/  
     _PID_Init(&PID_YAW, 0.008f, 0.0f, 0.001f, 22.0f, -22.0f);
 	
   /*PID参数初始化*/
-    _PID_Init(&PID_1, 0.02f, 0.0f, 0.01f, 20.0f, -20.0f);  //高度环
-    _PID_Init(&PID_2, 0.1f, 0.0f, 0.01f, 22.0f, -22.0f);   //距离环
+    _PID_Init(&PID_1, 0.1f, 0.0f, 0.01f, 20.0f, -20.0f);  //高度环
+    _PID_Init(&PID_2, 0.8f, 0.0f, 0.01f, 10.0f, -10.0f);   //距离环
     _PID_Init(&PID_3, 0.008f, 0.0f, 0.001f, 22.0f, -22.0f);
 }
 
@@ -253,7 +253,13 @@ int PID_calculate_user_high(float exp)//高度PID计算
   */
 int PID1_updata(float exp)
 {
-  return _PID_Traditional_computing(PID_1, exp);//增量式PID
+  float e_exp = 0;
+  if(exp > -10 && exp < 10)
+    e_exp = 0;
+  else
+    e_exp = exp * 1.4f;
+
+  return _PID_Traditional_computing(PID_1, e_exp);//增量式PID
 }
 
 /**
@@ -267,7 +273,12 @@ int PID1_updata(float exp)
   */
 int PID2_updata(float exp)
 {
-  return _PID_Traditional_computing(PID_2, exp);//传统式PID
+  float e_exp = 0;
+  if(exp > -2 && exp < 2)
+    e_exp = 0;
+  else
+    e_exp = exp;
+  return _PID_Traditional_computing(PID_2, e_exp);//传统式PID
 }
 
 /**

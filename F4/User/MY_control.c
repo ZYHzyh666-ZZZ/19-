@@ -23,7 +23,7 @@ float Yaw_target = 0;
 
 My_mission_task task_mission_1[]=
 {
-    {mission_1_1,15.0f},
+    {mission_1_1,2.0f},
     {mission_1_2,3.0f},
     {mission_1_3,3.0f},
 	{mission_1_4,1.0f},
@@ -175,11 +175,14 @@ void mission_1_1(void)//起飞
 		Yaw_target = N100.Yaw;
 		ANO_DT_SendString(1,"mod1_begin");
 
+
+
 	}
 	Set_High(postion_target_z);
 	mode_Hold_Yaw(Yaw_target);				//保持航向角稳定
 
-	if(ano_of.of_alt_cm > Default_height-3 && _time_ok(task_1))//起飞到150cm
+	// if(ano_of.of_alt_cm > Default_height-3 && _time_ok(task_1))//起飞到150cm
+	if(camera_flag && _time_ok(task_1))//起飞到150cm
 	{
 		task_1.finish = 1;
 		takeoff_once = 0;
@@ -203,14 +206,14 @@ void mission_1_2(void)//找目标
 
 	// postion_target_z =  MY_fly.C_system.z + PID1_updata(location[0]);
 
-	Set_High(postion_target_z);
 	mode_Hold_Yaw(Yaw_target);				//保持航向角稳定
-	Program_Ctrl_User_Set_HXYcmps(0,0);
+	Set_High(postion_target_z);
+	Program_Ctrl_User_Set_HXYcmps(velocity_target_x,0);
 	
 	if(_time_ok(task_1) && abs(location[0]) < 10)
 	{
 		task_1.finish = 1;
-		PID1_flag = 0;
+		// PID1_flag = 0;
 		takeoff_once = 0;
 		ANO_DT_SendString(2,"find OK!");
 		return;
@@ -225,11 +228,11 @@ void mission_1_3(void)//绕红杆
 		takeoff_once = 1;
 	}
 
-	postion_target_z =  MY_fly.C_system.z + PID1_updata(location[0]);
+	// postion_target_z =  MY_fly.C_system.z + PID1_updata(location[0]);
 
-	Set_High(postion_target_z);
 	mode_Hold_Yaw(Yaw_target);				//保持航向角稳定
-	Program_Ctrl_User_Set_HXYcmps(0,0);
+	Set_High(postion_target_z);
+	Program_Ctrl_User_Set_HXYcmps(velocity_target_x,0);
 	
 	if(_time_ok(task_1) && 0)
 	{

@@ -48,8 +48,8 @@ void USART_task(void *pvParameters);              	//串口数据检测
 void user_200Hz(TimerHandle_t xTimer); 				//周期定时器回调函数
 /*-------------------------------*/
 
-extern s16 postion_target_x ;
-extern s16 postion_target_y;
+extern s16 postion_target_x, velocity_target_x;
+extern s16 postion_target_y, velocity_target_y;
 extern s16 postion_target_z;
 extern double Work_time;
 
