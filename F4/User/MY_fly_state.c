@@ -1,8 +1,5 @@
-#include "MY_fly_state.h"
-#include "User_Math.h"
-#include "ANO_DT_LX.h"
+#include "ALL_include.h"
 
-#define PI 3.1415926535f
 
 _MY_fly_def MY_fly;
 

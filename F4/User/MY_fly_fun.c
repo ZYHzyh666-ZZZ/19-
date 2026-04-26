@@ -1,9 +1,4 @@
-#include "MY_fly_fun.h"
-#include "Uart_tiva.h"
-#include "MY_fly_state.h"
-
-#define ABS(x) ((x)>0?(x):-(x))
-#define PI 3.1415926
+#include "ALL_include.h"
 
 /*速度PID存放变量*/
 s16 x_speed;

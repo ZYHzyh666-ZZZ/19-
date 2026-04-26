@@ -1,13 +1,4 @@
-#include "MY_Camera.h"
-#include "ANO_DT_LX.h"
-#include "Drv_Uart.h"
-#include "MY_fly_fun.h"
-#include "MY_PID.h"
-#include "ANO_LX.h"
-#include "MY_control.h"
-#include "MY_task.h"
-#include "MY_fly_state.h"
-
+#include "ALL_include.h"
 
 #define X_POSITION 320 
 #define Y_POSITION 240 
@@ -72,7 +63,7 @@ void Camera_Data(void) //处理接收的数据
 
     if(PID1_flag)
     {
-        postion_target_z = MY_fly.C_system.z + PID1_updata(location[0]);
+        postion_target_z = (s16)MY_fly.C_system.z + PID1_updata(location[0]);
         velocity_target_x = PID2_updata(width[0]);
     }
     if(PID2_flag)

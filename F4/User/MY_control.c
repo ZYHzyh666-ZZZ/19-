@@ -1,20 +1,5 @@
-#include "ANO_LX.h"
-#include "ANO_DT_LX.h" 
-#include "LX_FC_Fun.h"
-#include "MY_fly_fun.h"
-#include "MY_PID.h"
-#include "MY_camera.h"
-#include "Drv_beep.h"
-#include "MY_task.h"
-#include "MY_Gstation.h"
-#include "Drv_led.h"
-#include "MY_Camera.h"
-#include "Drv_biubiu.h"
-#include "Drv_Uart.h"
-#include "Uart_tiva.h"
-#include "MY_fly_state.h"
-#include "User_math.h"
-#include "MY_control.h"
+#include "ALL_include.h"
+
 
 float Yaw_target = 0;
 

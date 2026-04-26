@@ -331,14 +331,14 @@ void ANO_LX_Task()
 		//匿名光流状态检测
 		AnoOF_Check_State(0.01f);
 		//计100ms
-		tmp_cnt[1]++;
-		tmp_cnt[1] %= 10;
-		if (tmp_cnt[1] == 0)
-		{
-			//读取电池电压信息
-			// Bat_Voltage_Data_Handle();
-			INA226_Read(&Bat_data);
-		}
+		// tmp_cnt[1]++;
+		// tmp_cnt[1] %= 10;
+		// if (tmp_cnt[1] == 0)
+		// {
+		// 	//读取电池电压信息
+		// 	// Bat_Voltage_Data_Handle();
+		// 	INA226_Read(&Bat_data);
+		// }
 	}
 //	//解析串口接收到的数据
 //	DrvUartDataCheck();

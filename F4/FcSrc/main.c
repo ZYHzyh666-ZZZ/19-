@@ -36,4 +36,5 @@ int main(void)
                 (UBaseType_t    )START_TASK_PRIO,       //任务优先级
                 (TaskHandle_t*  )&StartTask_Handler);   //任务句柄              
     vTaskStartScheduler();          //开启任务调度
+    while(1);
 }

@@ -1,15 +1,4 @@
-#include "ANO_DT_LX.h"
-#include "ANO_LX.h"
-#include "Drv_RcIn.h"
-#include "LX_FC_EXT_Sensor.h"
-#include "Drv_led.h"
-#include "LX_FC_State.h"
-#include "Drv_Uart.h"
- 
-#include "T265.h"
-#include "MY_Camera.h"
-#include "MY_fly_fun.h"
-#include "Uart_tiva.h"
+#include "ALL_include.h"
 
 #include <stdarg.h>
 

@@ -1,19 +1,4 @@
-#include "ALL_RTOS.h"
-#include "My_task.h"
-#include "Drv_led.h"
-#include "Drv_key.h"
-#include "MY_fly_fun.h"
-#include "Drv_Uart.h"
-#include "T265.h"
-#include "Drv_beep.h"
-#include "MY_Gstation.h"
-#include "MY_Camera.h"
-#include "Uart_tiva.h" 
-#include "ANO_DT_LX.h"
-#include "MY_fly_state.h"
-#include "MY_control.h"
-#include "Drv_uart.h"
-#include "User_math.h"
+#include "ALL_include.h"
 
 /*      任何曲柄和任务函数      */
 TaskHandle_t StartTask_Handler;             //开始任务（创建所有任务）
@@ -51,11 +36,14 @@ void ANO_task(void *pvParameters);
 TaskHandle_t USART_Handler;             	//串口数据更新
 void USART_task(void *pvParameters);
 
+TaskHandle_t BAT_Handler;             	//电池电压检测
+void BAT_task(void *pvParameters);
+
 /*---------------------------------*/
 u32 times;
 double Work_time = 0;
 
-u16 User_times_count; //
+u16 User_times_count; 
 s16 postion_target_x, velocity_target_x; 
 s16 postion_target_y, velocity_target_y;
 s16 postion_target_z;
@@ -121,7 +109,13 @@ void ANO_task(void *pvParameters)//
                 (void*          )NULL,                  
                 (UBaseType_t    )USART_TASK_PRIO,        
                 (TaskHandle_t*  )&USART_Handler); 
-			
+	//创建BAT任务
+    xTaskCreate((TaskFunction_t )BAT_task,             
+                (const char*    )"BAT_task",           
+                (uint16_t       )BAT_STK_SIZE,        
+                (void*          )NULL,                  
+                (UBaseType_t    )BAT_TASK_PRIO,        
+                (TaskHandle_t*  )&BAT_Handler); 
 
     vTaskDelete(ANO_Handler); //删除开始任务
     taskEXIT_CRITICAL();            //退出临界区
@@ -135,7 +129,7 @@ void ANO_task(void *pvParameters)//
   * 备注：      解析串口数据任务，优先级 15
   * 更新日期：   2026-1-22
   */
-void USART_task(void *pvParameters)//
+void USART_task(void *pvParameters)
 {	
 	while(1)
     {		
@@ -146,6 +140,24 @@ void USART_task(void *pvParameters)//
 		drvU5DataCheck();
 		drvU6DataCheck();
         vTaskDelay(1);
+    }
+}
+
+/**
+  * 函数作用：  电池电压检测函数
+  * 参数1：     参数句柄
+  * 返回值：    无
+  * 
+  * 备注：      读取电池电压数据任务，优先级 15
+  * 更新日期：   2026-4-26
+  */
+void BAT_task(void *pvParameters)
+{	
+    uint16_t Bat_data;
+	while(1)
+    {		
+		INA226_Read(&Bat_data);
+        vTaskDelay(100);
     }
 }
 
@@ -230,8 +242,8 @@ void User_task(void *pvParameters)
   * 更新日期：   2025-11-27
   */
 
-    static s16 location_out = 0;
-    static s16 width_out = 0;
+static s16 location_out = 0;
+static s16 width_out = 0;
 void user_200Hz(TimerHandle_t xTimer)
 {
     if(User_times_count++ == 200)//1000ms
@@ -253,7 +265,7 @@ void user_200Hz(TimerHandle_t xTimer)
     }
 
     location_out = MY_fly.C_system.z + PID1_updata(location[0]);
-    width_out = PID2_updata(width[0]);;
+    width_out = PID2_updata(width[0]);
     ANO_DT_Send_MY_DATA(0xF8,3,location_out,width_out,(int)(abs(Angle_calculation(90.0,MY_fly.body.yaw))));
 }
 

@@ -1,8 +1,4 @@
-#include "Uart_tiva.h"
-#include "ANO_DT_LX.h"
-#include "Drv_Uart.h"
-#include "Drv_AnoOf.h"
-#include "MY_fly_state.h"
+#include "ALL_include.h"
 
 N100_def N100 = {0};
 

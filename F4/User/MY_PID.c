@@ -1,7 +1,4 @@
-#include "MY_PID.h"
-#include "Uart_tiva.h"
-
-#define ABS(x) ((x)>0?(x):-(x))
+#include "ALL_include.h"
 
 _PID_parameter	PID_HIGH;
 _PID_parameter	PID_YAW;

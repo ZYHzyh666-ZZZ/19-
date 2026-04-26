@@ -1,11 +1,4 @@
-#include "MY_Gstation.h"
-#include "Drv_Uart.h"
-#include "Drv_AnoOf.h"
-#include "MY_Camera.h"
-#include "Drv_led.h"
-#include "MY_fly_fun.h"
-#include "My_task.h"
-#include "MY_control.h"
+#include "ALL_include.h"
 
 MY_Gatestation MY_HMI;
 
