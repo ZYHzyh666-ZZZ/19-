@@ -223,7 +223,7 @@ void DrvMotorPWMSet(int16_t pwm[8])
     TIM5->CCR3 = PWM_RADIO * (pwm[2]) + INIT_DUTY; //3
     TIM4->CCR1 = PWM_RADIO * (pwm[0]) + INIT_DUTY; //1
 	
-	TIM3->CCR3 = 800;
+	TIM3->CCR3 = 900;
 
 //    TIM4->CCR3 = PWM_RADIO * (pwm[4]) + INIT_DUTY; //5
 //    TIM4->CCR4 = PWM_RADIO * (pwm[5]) + INIT_DUTY; //6

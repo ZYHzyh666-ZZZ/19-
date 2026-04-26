@@ -171,11 +171,9 @@ void MY_PID_Init(void)
   /*航向角PID参数初始化*/  
     _PID_Init(&PID_YAW, 0.008f, 0.0f, 0.001f, 22.0f, -22.0f);
 	
-  /*视觉定位旋转PID参数初始化*/
-    _PID_Init(&PID_1, 0.1f, 0.0f, 0.01f, 40.0f, -40.0f);
-    _PID_Init(&PID_2, 0.6f, 0.0f, 0.1f, 22.0f, -22.0f);
-
-  /*闭环旋转PID参数初始化*/  
+  /*PID参数初始化*/
+    _PID_Init(&PID_1, 0.02f, 0.0f, 0.01f, 20.0f, -20.0f);  //高度环
+    _PID_Init(&PID_2, 0.1f, 0.0f, 0.01f, 22.0f, -22.0f);   //距离环
     _PID_Init(&PID_3, 0.008f, 0.0f, 0.001f, 22.0f, -22.0f);
 }
 
@@ -255,7 +253,7 @@ int PID_calculate_user_high(float exp)//高度PID计算
   */
 int PID1_updata(float exp)
 {
-  return _PID_Increment_computing(PID_1, exp);//增量式PID
+  return _PID_Traditional_computing(PID_1, exp);//增量式PID
 }
 
 /**

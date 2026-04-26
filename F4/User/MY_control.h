@@ -61,7 +61,7 @@ void mission_2_7(void);
 void mission_2_8(void);
 
 
-#define Default_height 120			//默认高度cm
-
+#define Default_height 110			//默认高度cm
+extern u8 PID1_flag;
 
 #endif

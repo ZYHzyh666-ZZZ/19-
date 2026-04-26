@@ -4,8 +4,9 @@
 #include "MY_fly_fun.h"
 #include "MY_PID.h"
 #include "ANO_LX.h"
-
-//飞机Y对应摄像头X
+#include "MY_control.h"
+#include "MY_task.h"
+#include "MY_fly_state.h"
 
 
 #define X_POSITION 320 
@@ -30,7 +31,7 @@ void Camera_Data(void) //处理接收的数据
 		{
 			width[0] = camera_data[1]*100 + camera_data[2]*10 + camera_data[3];
 			location[0] = camera_data[4]*100 + camera_data[5]*10 + camera_data[6];
-            location[0] = location[0] - Location_0_baseline;
+            location[0] = Location_0_baseline - location[0];
 			rx_flag[0] = 1;
 			
 			break;
@@ -60,8 +61,14 @@ void Camera_Data(void) //处理接收的数据
 	{
 		rx_flag[1] = 0;
 		ANO_DT_Send_MY_DATA(0xF7,2,width[1],location[1]);
-
 	}
+
+    if(PID1_flag)
+    {
+	    postion_target_z =  MY_fly.C_system.z + PID1_updata(location[0]);
+
+
+    }
 
 	
 }

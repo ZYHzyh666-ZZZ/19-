@@ -252,7 +252,7 @@ void user_200Hz(TimerHandle_t xTimer)
         HMI_Data_Print();
     }
 
-    location_out = Default_height + PID1_updata(location[0]);
+    location_out = MY_fly.C_system.z + PID1_updata(location[0]);
     width_out = PID2_updata(width[0]);
 
     ANO_DT_Send_MY_DATA(0xF8,2,location_out,width_out);
