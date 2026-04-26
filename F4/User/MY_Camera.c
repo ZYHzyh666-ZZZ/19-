@@ -14,6 +14,7 @@
 #define Z_POSITION 0
 
 #define Width_0_baseline 12
+#define Width_1_baseline 12
 #define Location_0_baseline 240
 #define Location_1_baseline 320
 
@@ -43,8 +44,11 @@ void Camera_Data(void) //处理接收的数据
 		{
 			width[1] = camera_data[1]*100 + camera_data[2]*10 + camera_data[3];
 			location[1] = camera_data[4]*100 + camera_data[5]*10 + camera_data[6];
+            width[1] = Width_1_baseline - width[1];
+            location[1] = Location_1_baseline - location[1];
+
 			rx_flag[1] = 1;
-			
+			camera_flag = 1;
 			break;
 		}
 		case 0x0C:
@@ -71,7 +75,12 @@ void Camera_Data(void) //处理接收的数据
         postion_target_z = MY_fly.C_system.z + PID1_updata(location[0]);
         velocity_target_x = PID2_updata(width[0]);
     }
-
+    if(PID2_flag)
+    {
+        // postion_target_z = MY_fly.C_system.z + PID1_updata(location[0]);
+        velocity_target_y = PID3_updata(location[1]);
+        velocity_target_x = PID2_updata(width[1]);
+    }
 	
 }
 

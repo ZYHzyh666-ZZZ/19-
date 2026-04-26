@@ -29,6 +29,7 @@ extern My_task_state task_2;	//任务结构体2
 /*-----------------------------------------------------*/
 
 #define _time_ok(task)	(task.mission_times > task.mission[task.step].time)
+#define abs(X) (X>0?X:-X)
 
 void create_task_1(void);		//创建任务
 void create_task_2(void);		//创建任务
@@ -63,5 +64,6 @@ void mission_2_8(void);
 
 #define Default_height 160			//默认高度cm
 extern u8 PID1_flag;
+extern u8 PID2_flag;
 
 #endif

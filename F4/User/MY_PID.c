@@ -254,7 +254,7 @@ int PID_calculate_user_high(float exp)//高度PID计算
 int PID1_updata(float exp)
 {
   float e_exp = 0;
-  if(exp > -10 && exp < 10)
+  if(exp > -7 && exp < 7)
     e_exp = 0;
   else
     e_exp = exp * 1.4f;
@@ -292,7 +292,12 @@ int PID2_updata(float exp)
   */
 int PID3_updata(float exp)
 {
-  return _PID_Increment_computing(PID_3, exp);//增量式PID
+  float e_exp = 0;
+  if(exp > -10 && exp < 10)
+    e_exp = 0;
+  else
+    e_exp = exp;
+  return _PID_Traditional_computing(PID_3, e_exp);//增量式PID
 }
 
 /**

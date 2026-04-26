@@ -13,7 +13,7 @@
 #include "MY_fly_state.h"
 #include "MY_control.h"
 #include "Drv_uart.h"
-
+#include "User_math.h"
 
 /*      任何曲柄和任务函数      */
 TaskHandle_t StartTask_Handler;             //开始任务（创建所有任务）
@@ -254,7 +254,6 @@ void user_200Hz(TimerHandle_t xTimer)
 
     location_out = MY_fly.C_system.z + PID1_updata(location[0]);
     width_out = PID2_updata(width[0]);;
-
-    ANO_DT_Send_MY_DATA(0xF8,2,location_out,width_out);
+    ANO_DT_Send_MY_DATA(0xF8,3,location_out,width_out,(int)(abs(Angle_calculation(90.0,MY_fly.body.yaw))));
 }
 
