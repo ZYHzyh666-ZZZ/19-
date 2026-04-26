@@ -6,7 +6,8 @@ packDir: null
 srcDirs: []
 virtualFolder:
   name: <virtual_root>
-  files: []
+  files:
+    - path: ../../README.md
   folders:
     - name: FcSrc
       files:
