@@ -43,5 +43,7 @@ int PID_N100_Hold_Yaw(float exp);//N100航向角PID计算
 
 
 int PID1_updata(float exp);
+int PID2_updata(float exp);
+int PID3_updata(float exp);
 
 #endif

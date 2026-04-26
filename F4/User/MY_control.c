@@ -60,7 +60,6 @@ u8 start_task2_flag = 0;		//任务开始标志
 u8 takeoff_once = 0;			//任务开始第一次标志位
 
 /*-----------------------------*/
-#define Default_height 120			//默认高度cm
 
 s16 postion_begin_x = 0;			//记录起飞坐标_X
 s16 postion_begin_y = 0;			//记录起飞坐标_Y
@@ -195,7 +194,7 @@ void mission_1_2(void)//找目标
 {
 	if(takeoff_once == 0)
 	{
-		postion_target_z = Default_height;
+		// postion_target_z = Default_height;
 		takeoff_once = 1;
 	}
 

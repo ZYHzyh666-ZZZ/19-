@@ -245,17 +245,45 @@ int PID_calculate_user_high(float exp)//高度PID计算
 }
 
 /**
-  * 函数作用：  闭环旋转
+  * 函数作用：  PID1更新函数
   * 参数1：     （float）目标误差
   * 返回值：    （int）PID输出
   * 
-  * 备注：      配合n100用
+  * 备注：      
   * 更新日期：   2025-11-29
   *             2025-12-7 重构,使用底层传统PID计算函数
   */
 int PID1_updata(float exp)
 {
   return _PID_Increment_computing(PID_1, exp);//增量式PID
+}
+
+/**
+  * 函数作用：  PID2更新函数
+  * 参数1：     （float）目标误差
+  * 返回值：    （int）PID输出
+  * 
+  * 备注：      
+  * 更新日期：   2025-11-29
+  *             2025-12-7 重构,使用底层传统PID计算函数
+  */
+int PID2_updata(float exp)
+{
+  return _PID_Traditional_computing(PID_2, exp);//传统式PID
+}
+
+/**
+  * 函数作用：  PID3更新函数
+  * 参数1：     （float）目标误差
+  * 返回值：    （int）PID输出
+  * 
+  * 备注：      
+  * 更新日期：   2025-11-29
+  *             2025-12-7 重构,使用底层传统PID计算函数
+  */
+int PID3_updata(float exp)
+{
+  return _PID_Increment_computing(PID_3, exp);//增量式PID
 }
 
 /**

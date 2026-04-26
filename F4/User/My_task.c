@@ -229,9 +229,11 @@ void User_task(void *pvParameters)
   * 备注：      基于RTOS的定时器
   * 更新日期：   2025-11-27
   */
+
+    static s16 location_out = 0;
+    static s16 width_out = 0;
 void user_200Hz(TimerHandle_t xTimer)
 {
-
     if(User_times_count++ == 200)//1000ms
     {
         User_times_count = 0;
@@ -249,5 +251,11 @@ void user_200Hz(TimerHandle_t xTimer)
 
         HMI_Data_Print();
     }
+
+    location_out = Default_height + PID1_updata(location[0]);
+    width_out = PID2_updata(width[0]);
+
+    ANO_DT_Send_MY_DATA(0xF8,2,location_out,width_out);
+
 }
 
